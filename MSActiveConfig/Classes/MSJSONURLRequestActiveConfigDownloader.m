@@ -22,7 +22,7 @@
 
     if ((self = [super init]))
     {
-        self.createRequestBlock = createRequest;
+        self.createRequestBlock = createRequestBlock;
     }
 
     return self;
@@ -30,12 +30,12 @@
 
 - (NSDictionary *)requestActiveConfigForUserWithID:(NSString *)userID error:(NSError *__autoreleasing *)error
 {
-    NSURLRequest *request = self.createRequestBlock();
+    NSURLRequest *request = self.createRequestBlock(userID);
 
     NSParameterAssert(request);
 
     NSURLResponse *response = nil;
-    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:error];
 
     if (error)
     {
@@ -43,7 +43,7 @@
     }
     else
     {
-        return [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&error];
+        return [NSJSONSerialization JSONObjectWithData:responseData options:0 error:error];
     }
 }
 
