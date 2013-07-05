@@ -708,7 +708,7 @@ static NSString *const kSectionName =  @"SectionName";
     id downloader = [OCMockObject mockForProtocol:@protocol(MSActiveConfigDownloader)];
     id observer = [OCMockObject observerMock];
 
-    NSNumber *userID = @"1";
+    NSString *userID = @"1";
 
     MSActiveConfig *activeConfig = [[MSActiveConfig alloc] initWithConfigDownloader:downloader configStore:nil];
     activeConfig.currentUserID = userID;
@@ -730,7 +730,7 @@ static NSString *const kSectionName =  @"SectionName";
 
 - (void)testActiveConfigIgnoresSomethingThatIsNotADictionary
 {
-    NSNumber *invalidSettingsDictionary = @"1";
+    NSString *invalidSettingsDictionary = @"1";
     MSActiveConfigMutableConfigurationState *configState = [self configStateWithConfigDictionary:(id)invalidSettingsDictionary];
     
     // Nothing should happen

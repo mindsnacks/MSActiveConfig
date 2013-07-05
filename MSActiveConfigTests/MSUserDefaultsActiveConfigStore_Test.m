@@ -30,7 +30,7 @@
 
     _userDefaults = [[NSUserDefaults alloc] init];
 
-    _userID = @1234;
+    _userID = @"1234";
 
     MSClearAllNSUserDefaults();
 
