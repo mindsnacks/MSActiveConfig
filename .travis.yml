@@ -3,4 +3,4 @@ before_install:
     - git submodule update --init
     - brew update
     - brew install xctool --HEAD
-script: xctool -project MSActiveConfig.xcodeproj -scheme 'MSActiveConfigTests' -reporter pretty -sdk iphonesimulator clean test
+script: xctool -project MSActiveConfig.xcodeproj -scheme 'MSActiveConfigTests' -reporter pretty -sdk iphonesimulator test
