@@ -342,7 +342,7 @@ NSString *const MSActiveConfigDownloadUpdateFinishedNotificationConfigurationSet
         if (!listenersForKey)
         {
             existingListenersArray = NO;
-            listenersForKey = [NSHashTable weakObjectsHashTable];
+            listenersForKey = [NSHashTable hashTableWithOptions:NSPointerFunctionsWeakMemory | NSPointerFunctionsObjectPointerPersonality];
         }
 
         [listenersForKey addObject:listener];
