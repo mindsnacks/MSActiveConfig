@@ -1,6 +1,9 @@
 # MSActiveConfig
 Remote configuration and A/B Testing framework for iOS.
 
+# Unit Test Status
+[![Build Status](https://travis-ci.org/MindSnacks/MSActiveConfig.png?branch=master)](https://travis-ci.org/MindSnacks/MSActiveConfig)
+
 ## MSActiveConfig at a glance
 One of the big challenges of making iOS apps is a consequence of the fact that pushing an app update takes a long time. In real life, sometimes we want to be able to change something in one of our apps remotely as quickly as possible *(See examples of usage for Active Config below)*
 
