@@ -16,7 +16,7 @@
  * @param &error (optional) if set, this method should provide an error object if the download fails.
  * @return it can return nil if the request fails.
  */
-- (NSDictionary *)requestActiveConfigForUserWithID:(NSNumber *)userID
+- (NSDictionary *)requestActiveConfigForUserWithID:(NSString *)userID
                                              error:(NSError **)error;
 
 @end

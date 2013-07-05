@@ -29,6 +29,6 @@
  * @discussion this happens synchronously to the caller.
  * Listeners will only be notified if userID is the same as -[MSActiveConfig currentUserID].    
  */
-- (void)setNewConfigState:(MSActiveConfigConfigurationState *)newConfigurationState forUserID:(NSNumber *)userID;
+- (void)setNewConfigState:(MSActiveConfigConfigurationState *)newConfigurationState forUserID:(NSString *)userID;
 
 @end

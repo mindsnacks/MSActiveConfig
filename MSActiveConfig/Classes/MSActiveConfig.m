@@ -95,7 +95,7 @@ NSString *const MSActiveConfigDownloadUpdateFinishedNotificationConfigurationSet
  * @param isLastKnownConfiguration whether it's just setting the initial state. If YES, it won't automatically persist the new state.
  */
 - (void)setNewConfigState:(MSActiveConfigConfigurationState *)newConfigurationState
-                forUserID:(NSNumber *)userID
+                forUserID:(NSString *)userID
  isLastKnownConfiguration:(BOOL)isLastKnownConfiguration
 {
     if (newConfigurationState)
@@ -163,14 +163,14 @@ NSString *const MSActiveConfigDownloadUpdateFinishedNotificationConfigurationSet
 }
 
 - (void)setNewConfigState:(MSActiveConfigConfigurationState *)newConfigurationState
-                forUserID:(NSNumber *)userID
+                forUserID:(NSString *)userID
 {
     [self setNewConfigState:newConfigurationState
                   forUserID:userID
    isLastKnownConfiguration:NO];
 }
 
-- (NSNumber *)currentUserID
+- (NSString *)currentUserID
 {
     @synchronized(self)
     {
@@ -178,7 +178,7 @@ NSString *const MSActiveConfigDownloadUpdateFinishedNotificationConfigurationSet
     }
 }
 
-- (void)setCurrentUserID:(NSNumber *)currentUserID
+- (void)setCurrentUserID:(NSString *)currentUserID
 {
     @synchronized(self)
     {
@@ -191,7 +191,7 @@ NSString *const MSActiveConfigDownloadUpdateFinishedNotificationConfigurationSet
     }
 }
 
-- (void)loadLastKnownActiveConfigurationForUserID:(NSNumber *)userID
+- (void)loadLastKnownActiveConfigurationForUserID:(NSString *)userID
 {
     dispatch_sync(self.privateQueue, ^{
         [self setNewConfigState:[[self.configStore lastKnownActiveConfigurationForUserID:userID] mutableCopy]
@@ -203,7 +203,7 @@ NSString *const MSActiveConfigDownloadUpdateFinishedNotificationConfigurationSet
 - (void)downloadNewConfig
 {
     dispatch_async(self.privateQueue, ^{
-        NSNumber *userIDToRequest = self.currentUserID;
+        NSString *userIDToRequest = self.currentUserID;
         if (![self isCurrentlyDownloadingConfigForUserID:userIDToRequest])
         {
             [self setDownloadInProgress:YES forUserID:userIDToRequest];
@@ -240,7 +240,7 @@ NSString *const MSActiveConfigDownloadUpdateFinishedNotificationConfigurationSet
 /**
  * @discussion must call from the private queue
  */
-- (void)downloadNewConfigFinishedSuccessfullyForUserID:(NSNumber *)userID
+- (void)downloadNewConfigFinishedSuccessfullyForUserID:(NSString *)userID
                                configurationDictionary:(NSDictionary *)configurationDictionary
 {
     const BOOL sameUserID = MSActiveConfigEqualUserIDs(self.currentUserID, userID);
@@ -414,22 +414,22 @@ NSString *const MSActiveConfigDownloadUpdateFinishedNotificationConfigurationSet
 
 #pragma mark - Simultaneous Download Handling
 
-- (NSNumber *)numberToUseForUserID:(NSNumber *)userID
+- (NSString *)stringToUseForUserID:(NSString *)userID
 {
     return userID ?: (id)[NSNull null];
 }
 
-- (BOOL)isCurrentlyDownloadingConfigForUserID:(NSNumber *)userID
+- (BOOL)isCurrentlyDownloadingConfigForUserID:(NSString *)userID
 {
     @synchronized(self.currentlyDownloadingUserIDs)
     {
-        return [self.currentlyDownloadingUserIDs containsObject:[self numberToUseForUserID:userID]];
+        return [self.currentlyDownloadingUserIDs containsObject:[self stringToUseForUserID:userID]];
     }
 }
 
-- (void)setDownloadInProgress:(BOOL)downloadInProgress forUserID:(NSNumber *)userID
+- (void)setDownloadInProgress:(BOOL)downloadInProgress forUserID:(NSString *)userID
 {
-    userID = [self numberToUseForUserID:userID];
+    userID = [self stringToUseForUserID:userID];
 
     @synchronized(self.currentlyDownloadingUserIDs)
     {

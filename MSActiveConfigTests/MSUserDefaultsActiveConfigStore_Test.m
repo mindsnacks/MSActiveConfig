@@ -16,7 +16,7 @@
 @interface MSUserDefaultsActiveConfigStore_Test : MSActiveConfig_BaseTest
 {
     NSUserDefaults *_userDefaults;
-    NSNumber *_userID;
+    NSString *_userID;
 
     MSUserDefaultsActiveConfigStore *_store;
 }
@@ -76,7 +76,7 @@
 
     [_store persistConfiguration:someConfiguration forUserID:_userID];
 
-    NSNumber *otherUserID = @999;
+    NSString *otherUserID = @"999";
 
     STAssertFalse([[_store lastKnownActiveConfigurationForUserID:otherUserID] isEqual:someConfiguration], @"Shouldn't return the same configuration!");
 }
@@ -95,8 +95,8 @@
 {
     MSActiveConfigMutableConfigurationState *initialConfiguration = [self configStateWithConfigDictionary:[NSDictionary dictionaryWithObject:@"SomeValue" forKey:@"SomeKey"]];
 
-    NSNumber *userID1 = @1;
-    NSNumber *userID2 = @2;
+    NSString *userID1 = @"1";
+    NSString *userID2 = @"2";
 
     MSUserDefaultsActiveConfigStore *store = [[MSUserDefaultsActiveConfigStore alloc] initWithUserDefaults:_userDefaults
                                                                                  initialSharedConfiguration:initialConfiguration];

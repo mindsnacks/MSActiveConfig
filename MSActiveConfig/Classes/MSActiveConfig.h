@@ -56,7 +56,7 @@ extern NSString *const MSActiveConfigDownloadUpdateFinishedNotificationConfigura
  * @abstract setting a new userID requests the last known config for that user
  * in the config store, and notifies the listeneres about the changes.
  */
-@property (atomic, copy) NSNumber *currentUserID;
+@property (atomic, copy) NSString *currentUserID;
 
 @property (nonatomic, readonly, strong) id<MSActiveConfigDownloader> configDownloader;
 @property (nonatomic, readonly, strong) id<MSActiveConfigStore> configStore;

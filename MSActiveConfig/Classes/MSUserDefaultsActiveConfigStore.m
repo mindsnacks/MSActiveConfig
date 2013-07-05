@@ -37,17 +37,16 @@ initialSharedConfiguration:(MSActiveConfigConfigurationState *)initialSharedConf
 
 #pragma mark -
 
-- (NSString *)userDefaultsKeyForCurrentRunLevelAndUserID:(NSNumber *)userID
+- (NSString *)userDefaultsKeyForCurrentRunLevelAndUserID:(NSString *)userID
 {
-    // For legacy reasons
-    const NSInteger numberValue = 2;
+    const NSInteger legacyNumericValue = 2;
 
-    return [NSString stringWithFormat:@"%@_%d_%@", MSActiveConfigStoreUserDefaultsKey, numberValue, userID];
+    return [NSString stringWithFormat:@"%@_%d_%@", MSActiveConfigStoreUserDefaultsKey, legacyNumericValue, userID];
 }
 
 #pragma mark - MSActiveConfigStore Protocol
 
-- (MSActiveConfigConfigurationState *)lastKnownActiveConfigurationForUserID:(NSNumber *)userID
+- (MSActiveConfigConfigurationState *)lastKnownActiveConfigurationForUserID:(NSString *)userID
 {
     NSData *archivedData = [self.userDefaults objectForKey:[self userDefaultsKeyForCurrentRunLevelAndUserID:userID]];
 
@@ -85,7 +84,7 @@ initialSharedConfiguration:(MSActiveConfigConfigurationState *)initialSharedConf
     }
 }
 
-- (void)persistConfiguration:(MSActiveConfigConfigurationState *)configuration forUserID:(NSNumber *)userID
+- (void)persistConfiguration:(MSActiveConfigConfigurationState *)configuration forUserID:(NSString *)userID
 {
     NSString *userDefaultsKey = [self userDefaultsKeyForCurrentRunLevelAndUserID:userID];
 
