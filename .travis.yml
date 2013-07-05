@@ -2,5 +2,5 @@ language: objective-c
 before_install:
     - git submodule update --init
     - brew update
-    - brew install xctool
-script: xctool -project MSActiveConfig.xcodeproj -scheme MSActiveConfigTests -reporter pretty -sdk iphonesimulator run-tests
+    - brew install xctool --HEAD
+script: xctool -project MSActiveConfig.xcodeproj -scheme 'MSActiveConfigTests' -reporter pretty -sdk iphonesimulator clean test
