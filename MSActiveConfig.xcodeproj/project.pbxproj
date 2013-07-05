@@ -15,7 +15,6 @@
 		D0CE657E1742FCAF00509571 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CE656B1742FCAF00509571 /* Foundation.framework */; };
 		D0CE65811742FCAF00509571 /* libMSActiveConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CE65681742FCAF00509571 /* libMSActiveConfig.a */; };
 		D0CE65871742FCAF00509571 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0CE65851742FCAF00509571 /* InfoPlist.strings */; };
-		D0CE658A1742FCAF00509571 /* MSActiveConfigTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE65891742FCAF00509571 /* MSActiveConfigTests.m */; };
 		D0CE65A41742FE2400509571 /* MSActiveConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE65941742FE2400509571 /* MSActiveConfig.m */; };
 		D0CE65A51742FE2400509571 /* MSActiveConfigConfigurationState.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE65971742FE2400509571 /* MSActiveConfigConfigurationState.m */; };
 		D0CE65A71742FE2400509571 /* MSActiveConfigMutableConfigurationState.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE659D1742FE2400509571 /* MSActiveConfigMutableConfigurationState.m */; };
@@ -29,6 +28,12 @@
 		D0CE65B21742FE5100509571 /* MSActiveConfigSection.h in Headers */ = {isa = PBXBuildFile; fileRef = D0CE659E1742FE2400509571 /* MSActiveConfigSection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0CE65B31742FE5100509571 /* MSActiveConfigSection+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = D0CE65A01742FE2400509571 /* MSActiveConfigSection+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0CE65B41742FE5100509571 /* MSActiveConfigStore.h in Headers */ = {isa = PBXBuildFile; fileRef = D0CE65A11742FE2400509571 /* MSActiveConfigStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0D1FD661787532800DE9371 /* MSActiveConfig_BaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1FD611787532800DE9371 /* MSActiveConfig_BaseTest.m */; };
+		D0D1FD671787532800DE9371 /* MSActiveConfig_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1FD621787532800DE9371 /* MSActiveConfig_Test.m */; };
+		D0D1FD681787532800DE9371 /* MSActiveConfigConfigurationState_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1FD631787532800DE9371 /* MSActiveConfigConfigurationState_Test.m */; };
+		D0D1FD691787532800DE9371 /* MSUserDefaultsActiveConfigStore_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1FD641787532800DE9371 /* MSUserDefaultsActiveConfigStore_Test.m */; };
+		D0D1FD6A1787532800DE9371 /* MSConfigSection_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1FD651787532800DE9371 /* MSConfigSection_Test.m */; };
+		D0D1FECE1787590800DE9371 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D1FEC51787580F00DE9371 /* libOCMock.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = D0CE65671742FCAF00509571;
 			remoteInfo = MSActiveConfig;
+		};
+		D0D1FEC01787580F00DE9371 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0D1FEBA1787580F00DE9371 /* OCMock.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 030EF0A814632FD000B04273;
+			remoteInfo = OCMock;
+		};
+		D0D1FEC21787580F00DE9371 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0D1FEBA1787580F00DE9371 /* OCMock.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 030EF0C014632FD000B04273;
+			remoteInfo = OCMockTests;
+		};
+		D0D1FEC41787580F00DE9371 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0D1FEBA1787580F00DE9371 /* OCMock.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 030EF0DC14632FF700B04273;
+			remoteInfo = OCMockLib;
+		};
+		D0D1FECC178758F300DE9371 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0D1FEBA1787580F00DE9371 /* OCMock.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 030EF0DB14632FF700B04273;
+			remoteInfo = OCMockLib;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -52,8 +85,6 @@
 		D0CE657C1742FCAF00509571 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		D0CE65841742FCAF00509571 /* MSActiveConfigTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MSActiveConfigTests-Info.plist"; sourceTree = "<group>"; };
 		D0CE65861742FCAF00509571 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D0CE65881742FCAF00509571 /* MSActiveConfigTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSActiveConfigTests.h; sourceTree = "<group>"; };
-		D0CE65891742FCAF00509571 /* MSActiveConfigTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSActiveConfigTests.m; sourceTree = "<group>"; };
 		D0CE65931742FE2400509571 /* MSActiveConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = MSActiveConfig.h; path = Classes/MSActiveConfig.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		D0CE65941742FE2400509571 /* MSActiveConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = MSActiveConfig.m; path = Classes/MSActiveConfig.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		D0CE65951742FE2400509571 /* MSActiveConfig+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MSActiveConfig+Private.h"; path = "Classes/MSActiveConfig+Private.h"; sourceTree = "<group>"; };
@@ -67,6 +98,13 @@
 		D0CE659F1742FE2400509571 /* MSActiveConfigSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSActiveConfigSection.m; path = Classes/MSActiveConfigSection.m; sourceTree = "<group>"; };
 		D0CE65A01742FE2400509571 /* MSActiveConfigSection+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MSActiveConfigSection+Private.h"; path = "Classes/MSActiveConfigSection+Private.h"; sourceTree = "<group>"; };
 		D0CE65A11742FE2400509571 /* MSActiveConfigStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = MSActiveConfigStore.h; path = Classes/MSActiveConfigStore.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		D0D1FD601787532800DE9371 /* MSActiveConfig_BaseTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSActiveConfig_BaseTest.h; sourceTree = "<group>"; };
+		D0D1FD611787532800DE9371 /* MSActiveConfig_BaseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSActiveConfig_BaseTest.m; sourceTree = "<group>"; };
+		D0D1FD621787532800DE9371 /* MSActiveConfig_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSActiveConfig_Test.m; sourceTree = "<group>"; };
+		D0D1FD631787532800DE9371 /* MSActiveConfigConfigurationState_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSActiveConfigConfigurationState_Test.m; sourceTree = "<group>"; };
+		D0D1FD641787532800DE9371 /* MSUserDefaultsActiveConfigStore_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSUserDefaultsActiveConfigStore_Test.m; sourceTree = "<group>"; };
+		D0D1FD651787532800DE9371 /* MSConfigSection_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSConfigSection_Test.m; sourceTree = "<group>"; };
+		D0D1FEBA1787580F00DE9371 /* OCMock.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OCMock.xcodeproj; path = Dependencies/OCMock/Source/OCMock.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0D1FECE1787590800DE9371 /* libOCMock.a in Frameworks */,
 				D0CE657B1742FCAF00509571 /* SenTestingKit.framework in Frameworks */,
 				D0CE657D1742FCAF00509571 /* UIKit.framework in Frameworks */,
 				D0CE657E1742FCAF00509571 /* Foundation.framework in Frameworks */,
@@ -155,8 +194,13 @@
 		D0CE65821742FCAF00509571 /* MSActiveConfigTests */ = {
 			isa = PBXGroup;
 			children = (
-				D0CE65881742FCAF00509571 /* MSActiveConfigTests.h */,
-				D0CE65891742FCAF00509571 /* MSActiveConfigTests.m */,
+				D0D1FD601787532800DE9371 /* MSActiveConfig_BaseTest.h */,
+				D0D1FD611787532800DE9371 /* MSActiveConfig_BaseTest.m */,
+				D0D1FD621787532800DE9371 /* MSActiveConfig_Test.m */,
+				D0D1FD631787532800DE9371 /* MSActiveConfigConfigurationState_Test.m */,
+				D0D1FD641787532800DE9371 /* MSUserDefaultsActiveConfigStore_Test.m */,
+				D0D1FD651787532800DE9371 /* MSConfigSection_Test.m */,
+				D0D1FEBA1787580F00DE9371 /* OCMock.xcodeproj */,
 				D0CE65831742FCAF00509571 /* Supporting Files */,
 			);
 			path = MSActiveConfigTests;
@@ -169,6 +213,16 @@
 				D0CE65851742FCAF00509571 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0D1FEBB1787580F00DE9371 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0D1FEC11787580F00DE9371 /* OCMock.framework */,
+				D0D1FEC31787580F00DE9371 /* OCMockTests.octest */,
+				D0D1FEC51787580F00DE9371 /* libOCMock.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +278,7 @@
 			);
 			dependencies = (
 				D0CE65801742FCAF00509571 /* PBXTargetDependency */,
+				D0D1FECD178758F300DE9371 /* PBXTargetDependency */,
 			);
 			name = MSActiveConfigTests;
 			productName = MSActiveConfigTests;
@@ -249,6 +304,12 @@
 			mainGroup = D0CE655F1742FCAF00509571;
 			productRefGroup = D0CE65691742FCAF00509571 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D0D1FEBB1787580F00DE9371 /* Products */;
+					ProjectRef = D0D1FEBA1787580F00DE9371 /* OCMock.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D0CE65671742FCAF00509571 /* MSActiveConfig */,
@@ -256,6 +317,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D0D1FEC11787580F00DE9371 /* OCMock.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OCMock.framework;
+			remoteRef = D0D1FEC01787580F00DE9371 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D0D1FEC31787580F00DE9371 /* OCMockTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OCMockTests.octest;
+			remoteRef = D0D1FEC21787580F00DE9371 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D0D1FEC51787580F00DE9371 /* libOCMock.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libOCMock.a;
+			remoteRef = D0D1FEC41787580F00DE9371 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D0CE65761742FCAF00509571 /* Resources */ = {
@@ -301,7 +386,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0CE658A1742FCAF00509571 /* MSActiveConfigTests.m in Sources */,
+				D0D1FD661787532800DE9371 /* MSActiveConfig_BaseTest.m in Sources */,
+				D0D1FD671787532800DE9371 /* MSActiveConfig_Test.m in Sources */,
+				D0D1FD681787532800DE9371 /* MSActiveConfigConfigurationState_Test.m in Sources */,
+				D0D1FD691787532800DE9371 /* MSUserDefaultsActiveConfigStore_Test.m in Sources */,
+				D0D1FD6A1787532800DE9371 /* MSConfigSection_Test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +401,11 @@
 			isa = PBXTargetDependency;
 			target = D0CE65671742FCAF00509571 /* MSActiveConfig */;
 			targetProxy = D0CE657F1742FCAF00509571 /* PBXContainerItemProxy */;
+		};
+		D0D1FECD178758F300DE9371 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OCMockLib;
+			targetProxy = D0D1FECC178758F300DE9371 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -335,9 +429,12 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_RECEIVER_WEAK = NO;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -348,7 +445,9 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -365,13 +464,18 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_RECEIVER_WEAK = NO;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -427,7 +531,14 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MSActiveConfig/MSActiveConfig-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/MSActiveConfigTests/Dependencies/**";
 				INFOPLIST_FILE = "MSActiveConfigTests/MSActiveConfigTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MSActiveConfigTests/Dependencies/OCMock/Examples/iOS5Example/usr/lib\"",
+					"\"$(SRCROOT)/MSActiveConfigTests/Dependencies/OCMock/Examples/iPhoneExample/Libraries\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -442,7 +553,14 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MSActiveConfig/MSActiveConfig-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/MSActiveConfigTests/Dependencies/**";
 				INFOPLIST_FILE = "MSActiveConfigTests/MSActiveConfigTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MSActiveConfigTests/Dependencies/OCMock/Examples/iOS5Example/usr/lib\"",
+					"\"$(SRCROOT)/MSActiveConfigTests/Dependencies/OCMock/Examples/iPhoneExample/Libraries\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};

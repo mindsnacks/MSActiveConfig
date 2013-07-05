@@ -1,0 +1,3 @@
+[submodule "MSActiveConfigTests/Dependencies/OCMock"]
+	path = MSActiveConfigTests/Dependencies/OCMock
+	url = https://github.com/erikdoe/ocmock.git

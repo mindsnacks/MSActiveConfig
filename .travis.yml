@@ -1,1 +1,4 @@
 language: objective-c
+before_install:
+    - git submodule update --init
+script: xctool -project MSActiveConfig.xcodeproj -scheme MSActiveConfigTests -reporter pretty run-tests
