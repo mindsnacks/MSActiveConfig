@@ -1,0 +1,34 @@
+{
+    "meta":
+    {
+        "format_version_string": "1.0",
+        "creation_time": "2012-08-20T19:36Z",
+        "is_bootstrapped_configuration": true
+    },
+    "config_sections":
+    {
+        "SampleViewConfiguration":
+        {
+            "settings":
+            {
+                "ViewBackgroundColor":
+                {
+                    "value":
+                    {
+                        "red": 0.5,
+                        "green": 0.1,
+                        "blue": 0.0
+                    }
+                },
+                "LabelText":
+                {
+                    "value": "This is the label text contained in the InitialActiveConfig.json file"
+                },
+                "ButtonEnabled":
+                {
+                    "value": true
+                }
+            }
+        },
+    }
+}
