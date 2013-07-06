@@ -96,8 +96,7 @@ This protocol defines a series of methods that allows `MSActiveConfig` to persis
 `MSActiveConfig` provides one implementation of this protocol that uses `NSUserDefault` as its backing store: **`MSUserDefaultsActiveConfigStore`**. This class also allows you to provide an initial or *bootstrapped* configuration that will be use until the app successfully downloads a more recent configuration from the server.
 
 ```objc
-- (id)initWithUserDefaults:(NSUserDefaults *)userDefaults
-initialSharedConfiguration:(MSActiveConfigConfigurationState *)initialSharedConfiguration;
+- (id)initWithInitialSharedConfiguration:(MSActiveConfigConfigurationState *)initialSharedConfiguration;
 ```
 
 ### `MSActiveConfigConfigurationState`

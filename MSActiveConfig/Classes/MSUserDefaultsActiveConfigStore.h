@@ -12,6 +12,14 @@ typedef NSString *(^MSUserDefaultsActiveConfigStoreCreateKeyBlock)(NSString *use
 
 @interface MSUserDefaultsActiveConfigStore : NSObject <MSActiveConfigStore>
 
+/**
+ * @param initialSharedConfiguration: configuration state used for every user until a newer configuration is retrieved.
+ */
+- (id)initWithInitialSharedConfiguration:(MSActiveConfigConfigurationState *)initialSharedConfiguration;
+
+/**
+ * @param userDefaults: default +[NSUserDefaults standardUserDefaults] if you use the simpler initializer.
+ */
 - (id)initWithUserDefaults:(NSUserDefaults *)userDefaults
 initialSharedConfiguration:(MSActiveConfigConfigurationState *)initialSharedConfiguration;
 

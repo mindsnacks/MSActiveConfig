@@ -22,6 +22,17 @@ static NSString *const MSActiveConfigStoreUserDefaultsDefaultKey = @"MSActiveCon
 
 @implementation MSUserDefaultsActiveConfigStore
 
+- (id)init
+{
+    return [self initWithInitialSharedConfiguration:nil];
+}
+
+- (id)initWithInitialSharedConfiguration:(MSActiveConfigConfigurationState *)initialSharedConfiguration
+{
+    return [self initWithUserDefaults:[NSUserDefaults standardUserDefaults]
+           initialSharedConfiguration:initialSharedConfiguration];
+}
+
 - (id)initWithUserDefaults:(NSUserDefaults *)userDefaults
 initialSharedConfiguration:(MSActiveConfigConfigurationState *)initialSharedConfiguration
 {
@@ -48,12 +59,6 @@ initialSharedConfiguration:(MSActiveConfigConfigurationState *)initialSharedConf
     }
 
     return self;
-}
-
-- (id)init
-{
-    return [self initWithUserDefaults:nil
-           initialSharedConfiguration:nil];
 }
 
 #pragma mark -
