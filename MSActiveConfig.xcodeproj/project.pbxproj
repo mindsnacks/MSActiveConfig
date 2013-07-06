@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D03194CF178748E00096833B /* MSUserDefaultsActiveConfigStore.h in Headers */ = {isa = PBXBuildFile; fileRef = D03194CD178748E00096833B /* MSUserDefaultsActiveConfigStore.h */; };
 		D03194D0178748E00096833B /* MSUserDefaultsActiveConfigStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D03194CE178748E00096833B /* MSUserDefaultsActiveConfigStore.m */; };
+		D0524283178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = D0524281178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.h */; };
+		D0524284178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = D0524282178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.m */; };
 		D0CE656C1742FCAF00509571 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CE656B1742FCAF00509571 /* Foundation.framework */; };
 		D0CE657B1742FCAF00509571 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CE657A1742FCAF00509571 /* SenTestingKit.framework */; };
 		D0CE657D1742FCAF00509571 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CE657C1742FCAF00509571 /* UIKit.framework */; };
@@ -77,6 +79,8 @@
 /* Begin PBXFileReference section */
 		D03194CD178748E00096833B /* MSUserDefaultsActiveConfigStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSUserDefaultsActiveConfigStore.h; path = Classes/MSUserDefaultsActiveConfigStore.h; sourceTree = "<group>"; };
 		D03194CE178748E00096833B /* MSUserDefaultsActiveConfigStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSUserDefaultsActiveConfigStore.m; path = Classes/MSUserDefaultsActiveConfigStore.m; sourceTree = "<group>"; };
+		D0524281178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSJSONURLRequestActiveConfigDownloader.h; path = Classes/MSJSONURLRequestActiveConfigDownloader.h; sourceTree = "<group>"; };
+		D0524282178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSJSONURLRequestActiveConfigDownloader.m; path = Classes/MSJSONURLRequestActiveConfigDownloader.m; sourceTree = "<group>"; };
 		D0CE65681742FCAF00509571 /* libMSActiveConfig.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMSActiveConfig.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0CE656B1742FCAF00509571 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0CE656F1742FCAF00509571 /* MSActiveConfig-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MSActiveConfig-Prefix.pch"; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 				D0CE659F1742FE2400509571 /* MSActiveConfigSection.m */,
 				D03194CD178748E00096833B /* MSUserDefaultsActiveConfigStore.h */,
 				D03194CE178748E00096833B /* MSUserDefaultsActiveConfigStore.m */,
+				D0524281178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.h */,
+				D0524282178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.m */,
 				D0CE656E1742FCAF00509571 /* Supporting Files */,
 			);
 			path = MSActiveConfig;
@@ -242,6 +248,7 @@
 				D0CE65AD1742FE5100509571 /* MSActiveConfigConfigurationState.h in Headers */,
 				D0CE65B11742FE5100509571 /* MSActiveConfigMutableConfigurationState.h in Headers */,
 				D03194CF178748E00096833B /* MSUserDefaultsActiveConfigStore.h in Headers */,
+				D0524283178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +386,7 @@
 				D0CE65A71742FE2400509571 /* MSActiveConfigMutableConfigurationState.m in Sources */,
 				D0CE65A81742FE2400509571 /* MSActiveConfigSection.m in Sources */,
 				D03194D0178748E00096833B /* MSUserDefaultsActiveConfigStore.m in Sources */,
+				D0524284178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
