@@ -1,4 +1,4 @@
-# MSActiveConfig
+# MSActiveConfig v1.0.0
 Remote configuration and A/B Testing framework for iOS.
 
 [![Build Status](https://travis-ci.org/mindsnacks/MSActiveConfig.png?branch=master)](https://travis-ci.org/mindsnacks/MSActiveConfig)
