@@ -10,7 +10,7 @@ One of the big challenges when making iOS apps is a consequence of the fact that
 const BOOL isThisFeatureEnabled = [activeConfig[@"AppFeatures"] boolForKey:@"SomeFeatureEnabled"];
 ```
 
-with this one-liner, MSActiveConfig would tell us if that particular feature has been enabled by us, but we can also react to changes on the configuration in real time:
+with this one-liner, `MSActiveConfig` would tell us if that particular feature has been enabled by us, but we can also react to changes on the configuration in real time:
 
 ```objc
 [activeConfig registerListener:self
