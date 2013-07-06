@@ -24,7 +24,7 @@ didReceiveConfigSection:(MSActiveConfigSection *)configSection
 }
 ```
 
-## Examples of Usage
+## Use cases
 - Enabling and disabling features. This allows you to test features with only a subset of users before you roll it out to everyone, or to control the load that feature creates on on your backend, for example.
 - Delaying making decisions after submitting the app. E.g.: *how often should this request happen?*, *How many times should this be retried?* With Active Config you no longer need to know the answer to those questions before you send your app to Apple, since you can change those values later easily.
 - **A/B Testing!** If you can serve a configuration to your users, you can serve different configurations depending on who that user is. See more below.
