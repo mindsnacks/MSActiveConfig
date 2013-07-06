@@ -10,12 +10,13 @@
 
 #import "MSActiveConfigConfigurationState.h"
 
-static NSString *const MSActiveConfigStoreUserDefaultsKey = @"MSActiveConfigStoreUserDefaults";
+static NSString *const MSActiveConfigStoreUserDefaultsDefaultKey = @"MSActiveConfigStoreUserDefaults";
 
 @interface MSUserDefaultsActiveConfigStore()
 
 @property (nonatomic, strong) NSUserDefaults *userDefaults;
 @property (nonatomic, strong) MSActiveConfigConfigurationState *initialSharedConfiguration;
+@property (nonatomic, copy) MSUserDefaultsActiveConfigStoreCreateKeyBlock createKeyBlock;
 
 @end
 
@@ -24,12 +25,26 @@ static NSString *const MSActiveConfigStoreUserDefaultsKey = @"MSActiveConfigStor
 - (id)initWithUserDefaults:(NSUserDefaults *)userDefaults
 initialSharedConfiguration:(MSActiveConfigConfigurationState *)initialSharedConfiguration
 {
+return [self initWithUserDefaults:userDefaults
+       initialSharedConfiguration:initialSharedConfiguration
+                   createKeyBlock:^NSString *(NSString *userID)
+    {
+        return [NSString stringWithFormat:@"%@_%@", MSActiveConfigStoreUserDefaultsDefaultKey, userID];
+    }];
+}
+
+- (id)initWithUserDefaults:(NSUserDefaults *)userDefaults
+initialSharedConfiguration:(MSActiveConfigConfigurationState *)initialSharedConfiguration
+            createKeyBlock:(MSUserDefaultsActiveConfigStoreCreateKeyBlock)createKeyBlock
+{
     NSParameterAssert(userDefaults);
+    NSParameterAssert(createKeyBlock);
 
     if ((self = [super init]))
     {
         self.userDefaults = userDefaults;
         self.initialSharedConfiguration = initialSharedConfiguration;
+        self.createKeyBlock = createKeyBlock;
     }
 
     return self;
@@ -43,18 +58,20 @@ initialSharedConfiguration:(MSActiveConfigConfigurationState *)initialSharedConf
 
 #pragma mark -
 
-- (NSString *)userDefaultsKeyForCurrentRunLevelAndUserID:(NSString *)userID
+- (NSString *)userDefaultsKeyForCurrentUserID:(NSString *)userID
 {
-    const NSInteger legacyNumericValue = 2;
+    NSString *userDefaultsKey = self.createKeyBlock(userID);
 
-    return [NSString stringWithFormat:@"%@_%d_%@", MSActiveConfigStoreUserDefaultsKey, legacyNumericValue, userID];
+    NSParameterAssert(userDefaultsKey);
+
+    return userDefaultsKey;
 }
 
 #pragma mark - MSActiveConfigStore Protocol
 
 - (MSActiveConfigConfigurationState *)lastKnownActiveConfigurationForUserID:(NSString *)userID
 {
-    NSData *archivedData = [self.userDefaults objectForKey:[self userDefaultsKeyForCurrentRunLevelAndUserID:userID]];
+    NSData *archivedData = [self.userDefaults objectForKey:[self userDefaultsKeyForCurrentUserID:userID]];
 
     if ([archivedData isKindOfClass:[NSData class]])
     {
@@ -92,7 +109,7 @@ initialSharedConfiguration:(MSActiveConfigConfigurationState *)initialSharedConf
 
 - (void)persistConfiguration:(MSActiveConfigConfigurationState *)configuration forUserID:(NSString *)userID
 {
-    NSString *userDefaultsKey = [self userDefaultsKeyForCurrentRunLevelAndUserID:userID];
+    NSString *userDefaultsKey = [self userDefaultsKeyForCurrentUserID:userID];
 
     if (configuration)
     {
