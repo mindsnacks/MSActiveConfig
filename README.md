@@ -63,6 +63,8 @@ MSActiveConfig *activeConfig = [[MSActiveConfig alloc] initWithConfigDownloader:
 																	configStore:configStore];
 ```
 
+*For a complete code snippet on how to instantiate the `MSActiveConfig` object, [check the wiki](https://github.com/mindsnacks/MSActiveConfig/wiki/MSActiveConfig-Instantiation).*
+
 ### `MSActiveConfigDownloader`
 
 A class must conform to this protocol to allow `MSActiveConfig` to retrieve updates from the network. The given class needs to implement this method.
