@@ -27,7 +27,7 @@ didReceiveConfigSection:(MSActiveConfigSection *)configSection
 ## Use cases
 - Enabling and disabling features. This allows you to test features with only a subset of users before you roll it out to everyone, or to control the load that feature creates on on your backend, for example.
 - Delaying making decisions after submitting the app. E.g.: *how often should this request happen?*, *How many times should this be retried?* With Active Config you no longer need to know the answer to those questions before you send your app to Apple, since you can change those values later easily.
-- **A/B Testing!** If you can serve a configuration to your users, you can serve different configurations depending on who that user is. See more below.
+- **A/B Testing!** If you can serve a configuration to your users, you can serve different configurations to different users. See more below.
 
 ### A/B Testing
 The A/B Testing frameworks out there give most of the responsibility to the app: they assume the app is going to know all the possible values that you are going to want to test for a specific feature. This is incredibly restrictive, since it will force you to update your app to try new values. Active Config encourages you to leave the knowledge on the backend, giving your more control.
