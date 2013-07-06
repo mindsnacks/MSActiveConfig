@@ -20,7 +20,7 @@ with this one-liner, MSActiveConfig would tell us if that particular feature has
 didReceiveConfigSection:(MSActiveConfigSection *)configSection
         forSectionName:(NSString *)sectionName
 {
-	[self changeFeatureEnabledStatus:[configSection[@"SettingKey"]]];
+	[self changeFeatureEnabledStatus:configSection[@"SettingKey"]];
 }
 ```
 
