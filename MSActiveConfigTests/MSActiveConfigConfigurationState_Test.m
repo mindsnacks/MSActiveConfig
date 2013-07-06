@@ -1,6 +1,6 @@
 //
 //  MSActiveConfigConfigurationState_Test.m
-//  MSAppKit
+//  MSActiveConfig
 //
 //  Created by Javier Soto on 8/13/12.
 //
