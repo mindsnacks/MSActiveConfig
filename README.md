@@ -149,3 +149,6 @@ This is a particular setting contained within a section. These are the ones that
 
 ## Requirements
 `MSActiveConfig` requires iOS6 or higher, but it would be easy to make it support iOS5 if you really need it for your project.
+
+## License
+`MSActiveConfig` is available under the MIT license. See the LICENSE file for more info.
