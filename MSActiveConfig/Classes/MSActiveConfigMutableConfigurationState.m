@@ -27,7 +27,7 @@
 - (void)setConfigurationDictionary:(NSMutableDictionary *)configurationDictionary
 {
     if (configurationDictionary != _configurationDictionary)
-    {;
+    {
         _configurationDictionary = [configurationDictionary mutableCopy];
     }
 }
