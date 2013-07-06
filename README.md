@@ -7,7 +7,7 @@ Remote configuration and A/B Testing framework for iOS.
 One of the big challenges when making iOS apps is a consequence of the fact that pushing an app update takes a long time. Sometimes we want to be able to change something in one of our apps remotely as quickly as possible.
 
 ```objc
-const BOOL isThisFeatureEnabled = [activeConfig[@"SectionName"] boolForKey:@"SettingKey"];
+const BOOL isThisFeatureEnabled = [activeConfig[@"AppFeatures"] boolForKey:@"SomeFeatureEnabled"];
 ```
 
 with this one-liner, MSActiveConfig would tell us if that particular feature has been enabled by us, but we can also react to changes on the configuration in real time:
