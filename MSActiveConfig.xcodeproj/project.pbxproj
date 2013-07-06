@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D03194CF178748E00096833B /* MSUserDefaultsActiveConfigStore.h in Headers */ = {isa = PBXBuildFile; fileRef = D03194CD178748E00096833B /* MSUserDefaultsActiveConfigStore.h */; };
+		D03194CF178748E00096833B /* MSUserDefaultsActiveConfigStore.h in Headers */ = {isa = PBXBuildFile; fileRef = D03194CD178748E00096833B /* MSUserDefaultsActiveConfigStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D03194D0178748E00096833B /* MSUserDefaultsActiveConfigStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D03194CE178748E00096833B /* MSUserDefaultsActiveConfigStore.m */; };
-		D0524283178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = D0524281178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.h */; };
+		D0524283178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = D0524281178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0524284178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = D0524282178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.m */; };
 		D0CE656C1742FCAF00509571 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CE656B1742FCAF00509571 /* Foundation.framework */; };
 		D0CE657B1742FCAF00509571 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CE657A1742FCAF00509571 /* SenTestingKit.framework */; };
