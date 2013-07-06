@@ -28,6 +28,11 @@
     return self;
 }
 
+- (id)init
+{
+    return [self initWithCreateRequestBlock:nil];
+}
+
 - (NSDictionary *)requestActiveConfigForUserWithID:(NSString *)userID error:(NSError *__autoreleasing *)error
 {
     NSURLRequest *request = self.createRequestBlock(userID);

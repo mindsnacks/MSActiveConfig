@@ -37,6 +37,11 @@ static NSString *const MSActiveConfigSectionValueKey = @"value";
     return self;
 }
 
+- (id)init
+{
+    return [self initWithDictionary:nil];
+}
+
 + (MSActiveConfigSection *)configSectionWithDictionary:(NSDictionary *)dictionary
 {
     return [[self alloc] initWithDictionary:dictionary];

@@ -35,6 +35,12 @@ initialSharedConfiguration:(MSActiveConfigConfigurationState *)initialSharedConf
     return self;
 }
 
+- (id)init
+{
+    return [self initWithUserDefaults:nil
+           initialSharedConfiguration:nil];
+}
+
 #pragma mark -
 
 - (NSString *)userDefaultsKeyForCurrentRunLevelAndUserID:(NSString *)userID
