@@ -12,9 +12,6 @@
 
 @interface MSActiveConfigManager : NSObject
 
-/**
- * @discussion 
- */
 + (instancetype)defaultInstance;
 
 @property (nonatomic, readonly, strong) MSActiveConfig *activeConfig;
