@@ -14,13 +14,13 @@ with this one-liner, MSActiveConfig would tell us if that particular feature has
 
 ```objc
 [activeConfig registerListener:self
-        		forSectionName:@"SectionName"];
+        		forSectionName:@"AppFeatures"];
 
 - (void)activeConfig:(MSActiveConfig *)activeConfig
 didReceiveConfigSection:(MSActiveConfigSection *)configSection
         forSectionName:(NSString *)sectionName
 {
-	[self changeFeatureEnabledStatus:configSection[@"SettingKey"]];
+	[self changeFeatureEnabledStatus:configSection[@"SomeFeatureEnabled"]];
 }
 ```
 
