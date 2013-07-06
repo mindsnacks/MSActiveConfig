@@ -247,7 +247,7 @@ NSString *const MSActiveConfigDownloadUpdateFinishedNotificationConfigurationIsC
 
     MSActiveConfigConfigurationState *newState = [[MSActiveConfigConfigurationState alloc] initWithDictionary:configurationDictionary];
 
-    if (newState)
+    if (newState && newState.configurationDictionary.count > 0)
     {
         if (sameUserID)
         {
