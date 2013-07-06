@@ -140,7 +140,7 @@ static inline id MSActiveConfigDecodeObjectWithKnownClass(NSCoder *decoder, NSSt
 {
     @try
     {
-        return [decoder decodeObjectOfClass:expectedClass forKey:key];
+        return [decoder decodeObjectOfClass:expectedClass forKey:key] ?: fallbackObject;
     }
     @catch (NSException *exception)
     {
