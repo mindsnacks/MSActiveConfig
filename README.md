@@ -58,7 +58,7 @@ MSActiveConfig *activeConfig = [[MSActiveConfig alloc] initWithConfigDownloader:
 																	configStore:configStore];
 ```
 
-### `MSJSONURLRequestActiveConfigDownloader`
+### `MSActiveConfigDownloader`
 
 A class must conform to this protocol to allow `MSActiveConfig` to retrieve updates from the network. The given class needs to implement this method.
 
@@ -67,7 +67,7 @@ A class must conform to this protocol to allow `MSActiveConfig` to retrieve upda
                                              error:(NSError **)error;
 ```
 
-For most applications, the provided `MSJSONURLRequestActiveConfigDownloader` class will suffice, it allows you to create a downloader object like this:
+For most applications, the provided **`MSJSONURLRequestActiveConfigDownloader`** class will suffice, it allows you to create a downloader object like this:
 
 ```objc
 downloader = [[MSJSONURLRequestActiveConfigDownloader alloc] initWithCreateRequestBlock:^NSURLRequest *(NSString *userID) {
@@ -77,7 +77,7 @@ downloader = [[MSJSONURLRequestActiveConfigDownloader alloc] initWithCreateReque
 
 *Note: `MSActiveConfig` will never start a download on its own, you must use the public method `-downloadNewConfig` to tell it to download.*
 
-### `MSUserDefaultsActiveConfigStore`
+### `MSActiveConfigStore`
 
 This protocol defines a series of methods that allows `MSActiveConfig` to persist downloaded configuration to be able to retrieve it on subsequent app launches in order to always use the most up to date configuration.
 
@@ -86,7 +86,7 @@ This protocol defines a series of methods that allows `MSActiveConfig` to persis
 - (void)persistConfiguration:(MSActiveConfigConfigurationState *)configuration forUserID:(NSString *)userID;
 ```
 
-`MSActiveConfig` provides one implementation of this protocol that uses `NSUserDefault` as its backing store: `MSUserDefaultsActiveConfigStore`. This class also allows you to provide an initial or *bootstrapped* configuration that will be use until the app successfully downloads a more recent configuration from the server.
+`MSActiveConfig` provides one implementation of this protocol that uses `NSUserDefault` as its backing store: **`MSUserDefaultsActiveConfigStore`**. This class also allows you to provide an initial or *bootstrapped* configuration that will be use until the app successfully downloads a more recent configuration from the server.
 
 ```objc
 - (id)initWithUserDefaults:(NSUserDefaults *)userDefaults
@@ -143,7 +143,6 @@ This is the top level group of settings. A section groups a series of settings t
 
 ### Setting Key
 This is a particular setting contained within a section. These are the ones that you'll ask `MSActiveConfigSection` for.
-
 
 ## User ID Support
 `MSActiveConfig` provides APIs to allow you to have different configurations for different users on your app. This is designed for apps that allow you to log-out and log-in with a different user. If this is not your case, all these APIs allow you to simply use `nil` as a userID.
