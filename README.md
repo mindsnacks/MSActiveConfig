@@ -153,6 +153,10 @@ This is a particular setting contained within a section. These are the ones that
 ## User ID Support
 `MSActiveConfig` provides APIs to allow you to have different configurations for different users on your app. This is designed for apps that allow you to log-out and log-in with a different user. If this is not your case, all these APIs allow you to simply use `nil` as a userID.
 
+## Sample app
+Run the target `MSActiveConfig-SampleApp` on the Xcode project for a sample implementation of `MSActiveConfig` on an app.
+This sample app uses [this backend](https://github.com/JaviSoto/ActiveConfig-SampleNodeBackend) to get its configuration.
+
 ## Requirements
 `MSActiveConfig` requires iOS6 or higher, but it would be easy to make it support iOS5 if you really need it for your project.
 
