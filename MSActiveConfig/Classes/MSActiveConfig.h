@@ -34,7 +34,7 @@ extern NSString *const MSActiveConfigDownloadUpdateFinishedNotificationUserIDKey
 extern NSString *const MSActiveConfigDownloadUpdateFinishedNotificationMetaKey;
 // Boolean value with whether the downloaded configuration was set as the current or not
 // It will be NO if it was a download request for a user that is no longer the active one.
-extern NSString *const MSActiveConfigDownloadUpdateFinishedNotificationConfigurationSetKey;
+extern NSString *const MSActiveConfigDownloadUpdateFinishedNotificationConfigurationIsCurrentKey;
 
 /**
  * @class MSActiveConfig
