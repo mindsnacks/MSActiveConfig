@@ -42,7 +42,7 @@
     NSURLResponse *response = nil;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:error];
 
-    if (error)
+    if (*error)
     {
         return nil;
     }
