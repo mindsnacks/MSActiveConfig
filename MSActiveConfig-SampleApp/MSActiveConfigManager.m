@@ -30,7 +30,7 @@ static MSActiveConfigManager *_activeConfigManager = nil;
         _activeConfigManager = [[self alloc] init];
 
         MSJSONURLRequestActiveConfigDownloader *downloader = [[MSJSONURLRequestActiveConfigDownloader alloc] initWithCreateRequestBlock:^NSURLRequest *(NSString *userID) {
-            return [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://msactiveconfig-sampleapp.herokuapp.com/active_config?userID=%@", userID]]];
+            return [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://msactiveconfig-sampleapp.herokuapp.com/active_config?userID=%d", userID.intValue]]];
         }];
 
         MSUserDefaultsActiveConfigStore *store = [[MSUserDefaultsActiveConfigStore alloc] initWithInitialSharedConfiguration:[self initialActiveConfigState]];
