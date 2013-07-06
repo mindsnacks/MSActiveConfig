@@ -35,7 +35,12 @@ The A/B Testing frameworks out there give most of the responsibility to the app:
 For example, if you were to A/B test some text on some part of your app, traditional A/B test frameworks would tell the app to choose option A, or option B. This way, the app must know before hand what those strings are. With Active Config, you would put the string inside the configuration, so you can change them at any point.
 
 ## Installation
-- Add `MSActiveConfig` as a submodule of your git repo ([cocoapods support comming](https://github.com/mindsnacks/MSActiveConfig/issues/15), help would be appreciated)
+### Using [CocoaPods](http://cocoapods.org/):
+- Add `pod 'MSActiveConfig', '~> 1.0.0'` to your `Podfile`.
+- You're done!
+
+### Using submodules:
+`git submodule add git@github.com:mindsnacks/MSActiveConfig.git <path/to/your/submodule>`
 
 There are two ways you can integrate `MSActiveConfig` into your project:
 - If you already have a workspace or don't mind creating one:
