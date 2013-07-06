@@ -30,7 +30,7 @@ NSString *const MSActiveConfigFirstDownloadFinishedNotification = @"MSActiveConf
 NSString *const MSActiveConfigDownloadUpdateFinishedNotification = @"MSActiveConfigDownloadUpdateFinishedNotification";
 NSString *const MSActiveConfigDownloadUpdateFinishedNotificationUserIDKey = @"user_id";
 NSString *const MSActiveConfigDownloadUpdateFinishedNotificationMetaKey = @"meta";
-NSString *const MSActiveConfigDownloadUpdateFinishedNotificationConfigurationSetKey = @"config_was_set";
+NSString *const MSActiveConfigDownloadUpdateFinishedNotificationConfigurationIsCurrentKey = @"config_was_set";
 
 @interface MSActiveConfig()
 
@@ -284,7 +284,7 @@ NSString *const MSActiveConfigDownloadUpdateFinishedNotificationConfigurationSet
          (@{
           MSActiveConfigDownloadUpdateFinishedNotificationUserIDKey : userID ?: [NSNull null],
           MSActiveConfigDownloadUpdateFinishedNotificationMetaKey : newState.meta ?: self.currentConfigurationMetaDictionary ?: @{},
-          MSActiveConfigDownloadUpdateFinishedNotificationConfigurationSetKey: @(newState != nil && sameUserID)
+          MSActiveConfigDownloadUpdateFinishedNotificationConfigurationIsCurrentKey: @(newState != nil && sameUserID)
           })];
     });
 }
