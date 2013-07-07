@@ -24,6 +24,8 @@
 		D047ADFE1788943D0098D6BC /* InitialActiveConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = D047ADFD1788943D0098D6BC /* InitialActiveConfig.json */; };
 		D0524283178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = D0524281178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0524284178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = D0524282178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.m */; };
+		D0A9DD1A178A25E4009BD002 /* MSActiveConfigConfigurationState+MSLazyLoadedState.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A9DD18178A25E4009BD002 /* MSActiveConfigConfigurationState+MSLazyLoadedState.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0A9DD1B178A25E4009BD002 /* MSActiveConfigConfigurationState+MSLazyLoadedState.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A9DD19178A25E4009BD002 /* MSActiveConfigConfigurationState+MSLazyLoadedState.m */; };
 		D0CB6BA41788959F002E8336 /* libMSActiveConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CE65681742FCAF00509571 /* libMSActiveConfig.a */; };
 		D0CB6BA617889661002E8336 /* MSSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CB6BA517889661002E8336 /* MSSettingsViewController.xib */; };
 		D0CB6BA817889670002E8336 /* MSSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CB6BA717889670002E8336 /* MSSampleViewController.xib */; };
@@ -126,6 +128,8 @@
 		D047ADFD1788943D0098D6BC /* InitialActiveConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = InitialActiveConfig.json; sourceTree = "<group>"; };
 		D0524281178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSJSONURLRequestActiveConfigDownloader.h; path = Classes/MSJSONURLRequestActiveConfigDownloader.h; sourceTree = "<group>"; };
 		D0524282178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSJSONURLRequestActiveConfigDownloader.m; path = Classes/MSJSONURLRequestActiveConfigDownloader.m; sourceTree = "<group>"; };
+		D0A9DD18178A25E4009BD002 /* MSActiveConfigConfigurationState+MSLazyLoadedState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MSActiveConfigConfigurationState+MSLazyLoadedState.h"; path = "Classes/MSActiveConfigConfigurationState+MSLazyLoadedState.h"; sourceTree = "<group>"; };
+		D0A9DD19178A25E4009BD002 /* MSActiveConfigConfigurationState+MSLazyLoadedState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MSActiveConfigConfigurationState+MSLazyLoadedState.m"; path = "Classes/MSActiveConfigConfigurationState+MSLazyLoadedState.m"; sourceTree = "<group>"; };
 		D0CB6BA517889661002E8336 /* MSSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MSSettingsViewController.xib; sourceTree = "<group>"; };
 		D0CB6BA717889670002E8336 /* MSSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MSSampleViewController.xib; sourceTree = "<group>"; };
 		D0CB6BA917889BBF002E8336 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -300,6 +304,8 @@
 				D03194CE178748E00096833B /* MSUserDefaultsActiveConfigStore.m */,
 				D0524281178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.h */,
 				D0524282178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.m */,
+				D0A9DD18178A25E4009BD002 /* MSActiveConfigConfigurationState+MSLazyLoadedState.h */,
+				D0A9DD19178A25E4009BD002 /* MSActiveConfigConfigurationState+MSLazyLoadedState.m */,
 				D0CE656E1742FCAF00509571 /* Supporting Files */,
 			);
 			path = MSActiveConfig;
@@ -365,6 +371,7 @@
 				D0CE65B11742FE5100509571 /* MSActiveConfigMutableConfigurationState.h in Headers */,
 				D03194CF178748E00096833B /* MSUserDefaultsActiveConfigStore.h in Headers */,
 				D0524283178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.h in Headers */,
+				D0A9DD1A178A25E4009BD002 /* MSActiveConfigConfigurationState+MSLazyLoadedState.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +555,7 @@
 				D0CE65A81742FE2400509571 /* MSActiveConfigSection.m in Sources */,
 				D03194D0178748E00096833B /* MSUserDefaultsActiveConfigStore.m in Sources */,
 				D0524284178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.m in Sources */,
+				D0A9DD1B178A25E4009BD002 /* MSActiveConfigConfigurationState+MSLazyLoadedState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +632,7 @@
 				INFOPLIST_FILE = "MSActiveConfig-SampleApp/MSActiveConfig-SampleApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -643,6 +652,7 @@
 				INFOPLIST_FILE = "MSActiveConfig-SampleApp/MSActiveConfig-SampleApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -721,7 +731,6 @@
 				DSTROOT = /tmp/MSActiveConfig.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MSActiveConfig/MSActiveConfig-Prefix.pch";
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_SIGN_COMPARE = YES;
 				GCC_WARN_UNKNOWN_PRAGMAS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
@@ -740,7 +749,6 @@
 				DSTROOT = /tmp/MSActiveConfig.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MSActiveConfig/MSActiveConfig-Prefix.pch";
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_SIGN_COMPARE = YES;
 				GCC_WARN_UNKNOWN_PRAGMAS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;

@@ -12,6 +12,7 @@
 #import <MSActiveConfig/MSJSONURLRequestActiveConfigDownloader.h>
 #import <MSActiveConfig/MSUserDefaultsActiveConfigStore.h>
 #import <MSActiveConfig/MSActiveConfigConfigurationState.h>
+#import <MSActiveConfig/MSActiveConfigConfigurationState+MSLazyLoadedState.h>
 
 static MSActiveConfigManager *_activeConfigManager = nil;
 
@@ -51,23 +52,7 @@ static MSActiveConfigManager *_activeConfigManager = nil;
 {
     NSString *bootstrappedActiveConfigFileName = @"InitialActiveConfig.json";
 
-    NSError *JSONLoadingError = nil;
-    NSData *bootstrappedActiveConfigJSON = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:bootstrappedActiveConfigFileName
-                                                                                                          ofType:nil]
-                                                                  options:0
-                                                                    error:&JSONLoadingError];
-    NSAssert(!JSONLoadingError, @"Couldn't read file %@ (%@)", bootstrappedActiveConfigFileName, JSONLoadingError);
-
-    NSError *JSONParsingError = nil;
-    NSDictionary *bootstrappedActiveConfigDictionary = [NSJSONSerialization JSONObjectWithData:bootstrappedActiveConfigJSON
-                                                                                       options:0
-                                                                                         error:&JSONParsingError];
-    NSAssert(!JSONParsingError, @"Couldn't parse file %@ (%@)", bootstrappedActiveConfigFileName, JSONParsingError);
-
-    MSActiveConfigConfigurationState *initialConfigurationState = [[MSActiveConfigConfigurationState alloc] initWithDictionary:bootstrappedActiveConfigDictionary];
-    NSAssert(initialConfigurationState, @"Couldn't create %@ object from JSON dictionary %@", NSStringFromClass([MSActiveConfigConfigurationState class]), bootstrappedActiveConfigDictionary);
-
-    return initialConfigurationState;
+    return [MSActiveConfigConfigurationState lazyLoadedConfigurationStateFromJSONFileAtPath:[[NSBundle mainBundle] pathForResource:bootstrappedActiveConfigFileName ofType:nil]];
 }
 
 @end
