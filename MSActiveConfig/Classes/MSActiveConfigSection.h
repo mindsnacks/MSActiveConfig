@@ -12,6 +12,8 @@
 
 - (id)valueObjectForKey:(NSString *)key;
 
+- (id)objectForKeyedSubscript:(NSString *)key;
+
 - (NSString *)stringForKey:(NSString *)key;
 
 - (NSArray *)arrayForKey:(NSString *)key;

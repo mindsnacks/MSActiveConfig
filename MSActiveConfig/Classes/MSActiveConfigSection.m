@@ -121,6 +121,11 @@ static NSString *const MSActiveConfigSectionValueKey = @"value";
     return nil;
 }
 
+- (id)objectForKeyedSubscript:(NSString *)key
+{
+    return [self valueObjectForKey:key];
+}
+
 - (NSString *)stringForKey:(NSString *)key
 {
     return [self valueObjectForKey:key expectedClass:[NSString class]];
