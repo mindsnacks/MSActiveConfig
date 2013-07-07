@@ -157,6 +157,9 @@ This is a particular setting contained within a section. These are the ones that
 Run the target `MSActiveConfig-SampleApp` on the Xcode project for a sample implementation of `MSActiveConfig` on an app.
 This sample app uses [this backend](https://github.com/JaviSoto/ActiveConfig-SampleNodeBackend) to get its configuration.
 
+## Roadmap
+`MSActiveConfig` is a solid framework that has been shipping in a handful of apps with millions of users for > 6 months. Future work is captured in the [issues page](https://github.com/mindsnacks/MSActiveConfig/issues).
+
 ## Requirements
 `MSActiveConfig` requires iOS6 or higher, but it would be easy to make it support iOS5 if you really need it for your project.
 
