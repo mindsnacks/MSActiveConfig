@@ -34,6 +34,8 @@ The A/B Testing frameworks out there give most of the responsibility to the app:
 
 For example, if you were to A/B test some text on some part of your app, traditional A/B test frameworks would tell the app to choose option A, or option B. This way, the app must know before hand what those strings are. With Active Config, you would put the string inside the configuration, so you can change them at any point.
 
+Of course there's a lot more to A/B testing than what `MSActiveConfig` does, but it provides the foundation for you to implement it in your apps with a lot of flexibility. More specific tools for A/B testing are coming in future releases.
+
 ## Installation
 ### Using [CocoaPods](http://cocoapods.org/):
 - Add `pod 'MSActiveConfig', '~> 1.0.0'` to your `Podfile`.
