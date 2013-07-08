@@ -51,8 +51,9 @@ static MSActiveConfigManager *_activeConfigManager = nil;
 + (MSActiveConfigConfigurationState *)initialActiveConfigState
 {
     NSString *bootstrappedActiveConfigFileName = @"InitialActiveConfig.json";
+    NSString *bootstrappedActiveConfigFilePath = [[NSBundle mainBundle] pathForResource:bootstrappedActiveConfigFileName ofType:nil];
 
-    return [MSActiveConfigConfigurationState lazyLoadedConfigurationStateFromJSONFileAtPath:[[NSBundle mainBundle] pathForResource:bootstrappedActiveConfigFileName ofType:nil]];
+    return [MSActiveConfigConfigurationState lazyLoadedConfigurationStateFromJSONFileAtPath:bootstrappedActiveConfigFilePath];
 }
 
 @end
