@@ -16,3 +16,9 @@
 @property (nonatomic, readwrite, copy) NSMutableDictionary *configurationDictionary;
 
 @end
+
+@interface MSActiveConfigConfigurationState (MSActiveConfigMutableConfigurationState) <NSMutableCopying>
+
+- (MSActiveConfigMutableConfigurationState *)mutableCopy;
+
+@end

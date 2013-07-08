@@ -15,7 +15,8 @@
  * @discussion for a mutable version of this class see `MSActiveConfigMutableConfigurationState`
  * Objects of this class are not mutable and therefor safe to use from different threads.
  */
-@interface MSActiveConfigConfigurationState : NSObject <NSCopying, NSMutableCopying, NSSecureCoding>
+
+@interface MSActiveConfigConfigurationState : NSObject <NSCopying, NSSecureCoding>
 
 @property (nonatomic, readonly, copy) NSString *creationDateString;
 @property (nonatomic, readonly, copy) NSString *formatVersion;
@@ -29,7 +30,6 @@
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
 - (MSActiveConfigConfigurationState *)copy;
-- (MSActiveConfigMutableConfigurationState *)mutableCopy;
 
 /**
  * @return an `activeConfigSection` object with the settings in this active config state or nil if non present.

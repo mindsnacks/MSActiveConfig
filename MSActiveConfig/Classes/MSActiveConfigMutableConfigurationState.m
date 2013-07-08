@@ -33,3 +33,26 @@
 }
 
 @end
+
+@implementation MSActiveConfigConfigurationState (MSActiveConfigMutableConfigurationState)
+
+#pragma mark - NSMutableCopying
+
+- (id)mutableCopyWithZone:(NSZone *)zone
+{
+    MSActiveConfigMutableConfigurationState *mutableCopy = [[MSActiveConfigMutableConfigurationState allocWithZone:zone] init];
+
+    mutableCopy.configurationDictionary = [self.configurationDictionary mutableCopy];
+    mutableCopy.formatVersion = self.formatVersion;
+    mutableCopy.meta = self.meta;
+    mutableCopy.creationDateString = self.creationDateString;
+
+    return mutableCopy;
+}
+
+- (MSActiveConfigMutableConfigurationState *)mutableCopy
+{
+    return [self mutableCopyWithZone:nil];
+}
+
+@end
