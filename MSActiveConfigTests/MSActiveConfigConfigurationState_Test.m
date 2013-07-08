@@ -9,6 +9,7 @@
 #import "MSActiveConfig_BaseTest.h"
 
 #import "MSActiveConfigConfigurationState.h"
+#import "MSActiveConfigConfigurationState+Private.h"
 #import "MSActiveConfigMutableConfigurationState.h"
 
 @interface MSActiveConfigConfigurationState_Test : MSActiveConfig_BaseTest

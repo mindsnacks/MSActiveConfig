@@ -7,6 +7,7 @@
 //
 
 #import "MSActiveConfigMutableConfigurationState.h"
+#import "MSActiveConfigConfigurationState+Private.h"
 
 @implementation MSActiveConfigMutableConfigurationState
 

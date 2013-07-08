@@ -13,6 +13,7 @@
 #import "MSActiveConfigSection+Private.h"
 
 #import "MSActiveConfigConfigurationState.h"
+#import "MSActiveConfigConfigurationState+Private.h"
 #import "MSActiveConfigMutableConfigurationState.h"
 #import "MSActiveConfigStore.h"
 
