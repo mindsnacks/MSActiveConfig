@@ -178,11 +178,6 @@ static inline id MSActiveConfigDecodeObjectWithKnownClass(NSCoder *decoder, NSSt
 
 #pragma mark - NSCopying
 
-- (MSActiveConfigConfigurationState *)copy
-{
-    return [self copyWithZone:nil];
-}
-
 - (id)copyWithZone:(NSZone *)zone
 {
     return self;

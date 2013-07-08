@@ -29,8 +29,6 @@
  */
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
-- (MSActiveConfigConfigurationState *)copy;
-
 /**
  * @return an `activeConfigSection` object with the settings in this active config state or nil if non present.
  */

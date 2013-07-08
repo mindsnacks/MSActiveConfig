@@ -50,9 +50,4 @@
     return mutableCopy;
 }
 
-- (MSActiveConfigMutableConfigurationState *)mutableCopy
-{
-    return [self mutableCopyWithZone:nil];
-}
-
 @end

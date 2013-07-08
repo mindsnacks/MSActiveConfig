@@ -19,6 +19,6 @@
 
 @interface MSActiveConfigConfigurationState (MSActiveConfigMutableConfigurationState) <NSMutableCopying>
 
-- (MSActiveConfigMutableConfigurationState *)mutableCopy;
++ (MSActiveConfigMutableConfigurationState *)mutableCopyWithZone:(NSZone *)zone;
 
 @end
