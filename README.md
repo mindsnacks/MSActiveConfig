@@ -1,4 +1,4 @@
-# MSActiveConfig v1.0.0
+# MSActiveConfig v1.0.1
 Remote configuration and A/B Testing framework for iOS.
 
 [![Build Status](https://travis-ci.org/mindsnacks/MSActiveConfig.png?branch=master)](https://travis-ci.org/mindsnacks/MSActiveConfig)
@@ -38,7 +38,7 @@ Of course there's a lot more to A/B testing than what `MSActiveConfig` does, but
 
 ## Installation
 ### Using [CocoaPods](http://cocoapods.org/):
-- Add `pod 'MSActiveConfig', '~> 1.0.0'` to your `Podfile`.
+- Add `pod 'MSActiveConfig', '~> 1.0.1'` to your `Podfile`.
 - You're done!
 
 ### Using submodules:
