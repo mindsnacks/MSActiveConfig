@@ -1,5 +1,5 @@
 # MSActiveConfig v1.0.1
-Remote configuration and A/B Testing framework for iOS.
+Remote configuration and A/B Testing framework for iOS. [**Documentation** available online](http://cocoadocs.org/docsets/MSActiveConfig).
 
 [![Build Status](https://travis-ci.org/mindsnacks/MSActiveConfig.png?branch=master)](https://travis-ci.org/mindsnacks/MSActiveConfig)
 
