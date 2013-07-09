@@ -7,6 +7,7 @@
 //
 
 #import "MSActiveConfigConfigurationState.h"
+#import "MSActiveConfigConfigurationState+Private.h"
 #import "MSActiveConfigSection+Private.h"
 
 #import "MSActiveConfigMutableConfigurationState.h"
@@ -21,7 +22,6 @@ static NSString *const MSActiveConfigConfigurationStateCreationTimeKey = @"creat
 @property (nonatomic, readwrite, copy) NSString *creationDateString;
 @property (nonatomic, readwrite, copy) NSString *formatVersion;
 @property (nonatomic, readwrite, copy) NSDictionary *meta;
-@property (nonatomic, readwrite, copy) NSDictionary *configurationDictionary;
 
 @end
 
@@ -94,9 +94,11 @@ static NSString *const MSActiveConfigConfigurationStateCreationTimeKey = @"creat
     return self;
 }
 
-- (MSActiveConfigSection *)configSectionWithName:(NSString *)sectionName
+- (MSActiveConfigSection *)configSectionWithName:(NSString *)configSectionName
 {
-    return [[MSActiveConfigSection alloc] initWithDictionary:[self.configurationDictionary objectForKey:sectionName]];
+    NSParameterAssert(configSectionName);
+
+    return [[MSActiveConfigSection alloc] initWithDictionary:[self.configurationDictionary objectForKey:configSectionName]];
 }
 
 - (NSArray *)configSectionNames
@@ -178,33 +180,9 @@ static inline id MSActiveConfigDecodeObjectWithKnownClass(NSCoder *decoder, NSSt
 
 #pragma mark - NSCopying
 
-- (MSActiveConfigConfigurationState *)copy
-{
-    return [self copyWithZone:nil];
-}
-
 - (id)copyWithZone:(NSZone *)zone
 {
     return self;
-}
-
-#pragma mark - NSMutableCopying
-
-- (id)mutableCopyWithZone:(NSZone *)zone
-{
-    MSActiveConfigMutableConfigurationState *mutableCopy = [[MSActiveConfigMutableConfigurationState allocWithZone:zone] init];
-
-    mutableCopy.configurationDictionary = [self.configurationDictionary mutableCopy];
-    mutableCopy.formatVersion = self.formatVersion;
-    mutableCopy.meta = self.meta;
-    mutableCopy.creationDateString = self.creationDateString;
-
-    return mutableCopy;
-}
-
-- (MSActiveConfigMutableConfigurationState *)mutableCopy
-{
-    return [self mutableCopyWithZone:nil];
 }
 
 @end
