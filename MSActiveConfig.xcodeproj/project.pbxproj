@@ -130,6 +130,7 @@
 		D0524282178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSJSONURLRequestActiveConfigDownloader.m; path = Classes/MSJSONURLRequestActiveConfigDownloader.m; sourceTree = "<group>"; };
 		D0A9DD18178A25E4009BD002 /* MSActiveConfigConfigurationState+MSLazyLoadedState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MSActiveConfigConfigurationState+MSLazyLoadedState.h"; path = "Classes/MSActiveConfigConfigurationState+MSLazyLoadedState.h"; sourceTree = "<group>"; };
 		D0A9DD19178A25E4009BD002 /* MSActiveConfigConfigurationState+MSLazyLoadedState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MSActiveConfigConfigurationState+MSLazyLoadedState.m"; path = "Classes/MSActiveConfigConfigurationState+MSLazyLoadedState.m"; sourceTree = "<group>"; };
+		D0C807DA178B77B3009874F3 /* MSActiveConfigConfigurationState+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MSActiveConfigConfigurationState+Private.h"; path = "Classes/MSActiveConfigConfigurationState+Private.h"; sourceTree = "<group>"; };
 		D0CB6BA517889661002E8336 /* MSSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MSSettingsViewController.xib; sourceTree = "<group>"; };
 		D0CB6BA717889670002E8336 /* MSSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MSSampleViewController.xib; sourceTree = "<group>"; };
 		D0CB6BA917889BBF002E8336 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -291,6 +292,7 @@
 				D0CE65951742FE2400509571 /* MSActiveConfig+Private.h */,
 				D0CE65941742FE2400509571 /* MSActiveConfig.m */,
 				D0CE65961742FE2400509571 /* MSActiveConfigConfigurationState.h */,
+				D0C807DA178B77B3009874F3 /* MSActiveConfigConfigurationState+Private.h */,
 				D0CE65971742FE2400509571 /* MSActiveConfigConfigurationState.m */,
 				D0CE659C1742FE2400509571 /* MSActiveConfigMutableConfigurationState.h */,
 				D0CE659D1742FE2400509571 /* MSActiveConfigMutableConfigurationState.m */,

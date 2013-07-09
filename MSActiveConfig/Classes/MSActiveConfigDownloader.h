@@ -8,13 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ An object must conform to the `MSActiveConfigDownloader` protocol for `MSActiveConfig` to be able to ask it to download
+ a configuration update from the network.
+ */
+
 @protocol MSActiveConfigDownloader <NSObject>
 
 /**
- * @discussion the method must run synchronously and return the configuration dictionary.
- * @param userID (optional) if the userID is nil, the generic config is requested.
- * @param &error (optional) if set, this method should provide an error object if the download fails.
- * @return it can return nil if the request fails.
+ This method must run synchronously and return when the request is finished.
+ @note This method is invoked on an arbitrary thread.
+ @param userID (optional) If the userID is `nil`, it should request a generic (not user-specific) configuration.
+ @param error (optional) This method should provide an error object if the download fails.
+ @return The retrieved configuration dictionary or `nil` if the request failed.
  */
 - (NSDictionary *)requestActiveConfigForUserWithID:(NSString *)userID
                                              error:(NSError **)error;

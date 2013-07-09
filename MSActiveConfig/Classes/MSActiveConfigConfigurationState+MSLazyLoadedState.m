@@ -8,6 +8,8 @@
 
 #import "MSActiveConfigConfigurationState+MSLazyLoadedState.h"
 
+#import "MSActiveConfigConfigurationState+Private.h"
+
 typedef MSActiveConfigConfigurationState *(^_MSActiveConfigConfigurationStateFutureConfigStateLoadBlock)(void);
 
 /**
@@ -85,9 +87,9 @@ typedef MSActiveConfigConfigurationState *(^_MSActiveConfigConfigurationStateFut
     [self.actualConfigState encodeWithCoder:aCoder];
 }
 
-- (MSActiveConfigSection *)configSectionWithName:(NSString *)configKey
+- (MSActiveConfigSection *)configSectionWithName:(NSString *)configSectionName
 {
-    return [self.actualConfigState configSectionWithName:configKey];
+    return [self.actualConfigState configSectionWithName:configSectionName];
 }
 
 - (NSArray *)configSectionNames

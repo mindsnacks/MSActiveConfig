@@ -8,18 +8,26 @@
 
 @class MSActiveConfigConfigurationState;
 
+
+/**
+ You can provide `MSActiveConfig` with an object that conforms to `MSActiveConfigStore` to allow it to retrieve the last known
+ configuration when the app launches, and to store the subsequent updates that it downloads.
+ */
+
 @protocol MSActiveConfigStore <NSObject>
 
 /**
- * @discussion return the last persisted configuration returned by the server and stored using -persistConfiguration:forUserID: or nil if non.
- * If initialSharedConfiguration was provided, and the store doesn't have any newest configuration, the shared configuration will be returned.
+ Return the last persisted configuration through `-persistConfiguration:forUserID:` or `nil`.
+ @note There's no guarantee on which thread this method will be invoked on.
  */
 - (MSActiveConfigConfigurationState *)lastKnownActiveConfigurationForUserID:(NSString *)userID;
 
 /**
- * @discussion store the ConfigurationState in the provided user defaults with the provided userID and runlevel
- * @param configuration If nil, it removes the currently stored dictionary.
- * @param userID if nil, it stores it as the default, non user-specific configuration.
+ The implementation of this method must persist the provided `MSActiveConfigConfigurationState` object synchronously.
+ @param configuration If `nil`, it must removed the currently stored configuration for that `userID`.
+ @param userID This method must store the configuration separately for each user. It can be `nil` for the *generic* configuration.
+ @note `MSActiveConfigConfigurationState` conforms to `NSSecureCoding`.
+ @note There's no guarantee on which thread this method will be invoked on.
  */
 - (void)persistConfiguration:(MSActiveConfigConfigurationState *)configuration forUserID:(NSString *)userID;
 

@@ -7,6 +7,7 @@
 //
 
 #import "MSActiveConfigMutableConfigurationState.h"
+#import "MSActiveConfigConfigurationState+Private.h"
 
 @implementation MSActiveConfigMutableConfigurationState
 
@@ -30,6 +31,24 @@
     {
         _configurationDictionary = [configurationDictionary mutableCopy];
     }
+}
+
+@end
+
+@implementation MSActiveConfigConfigurationState (MSActiveConfigMutableConfigurationState)
+
+#pragma mark - NSMutableCopying
+
+- (id)mutableCopyWithZone:(NSZone *)zone
+{
+    MSActiveConfigMutableConfigurationState *mutableCopy = [[MSActiveConfigMutableConfigurationState allocWithZone:zone] init];
+
+    mutableCopy.configurationDictionary = [self.configurationDictionary mutableCopy];
+    mutableCopy.formatVersion = self.formatVersion;
+    mutableCopy.meta = self.meta;
+    mutableCopy.creationDateString = self.creationDateString;
+
+    return mutableCopy;
 }
 
 @end

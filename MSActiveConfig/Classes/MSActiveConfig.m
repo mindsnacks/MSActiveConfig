@@ -13,13 +13,14 @@
 #import "MSActiveConfigSection+Private.h"
 
 #import "MSActiveConfigConfigurationState.h"
+#import "MSActiveConfigConfigurationState+Private.h"
 #import "MSActiveConfigMutableConfigurationState.h"
 #import "MSActiveConfigStore.h"
 
 #import "MSActiveConfigDownloader.h"
 
 #if !__has_feature(objc_arc)
-#error MSActiveConfig requires being compiled with ARC on.
+#error MSActiveConfig requires being compiled with ARC enabled.
 #endif
 
 static NSString *const MSActiveConfigFirstDownloadFinishedUserDefaultsKey = @"com_mindsnacks_activeconfig_firstdownloadfinished";
@@ -382,20 +383,9 @@ NSString *const MSActiveConfigDownloadUpdateFinishedNotificationConfigurationIsC
 
 - (MSActiveConfigSection *)configSectionWithName:(NSString *)sectionName
 {
-    NSDictionary *configurationDictionary = nil;
-
     @synchronized(self)
     {
-        configurationDictionary = [self.configDictionary valueForKey:sectionName];
-    }
-
-    if (configurationDictionary)
-    {
-        return [[MSActiveConfigSection alloc] initWithDictionary:configurationDictionary];
-    }
-    else
-    {
-        return nil;
+        return [self.configurationState configSectionWithName:sectionName];
     }
 }
 
