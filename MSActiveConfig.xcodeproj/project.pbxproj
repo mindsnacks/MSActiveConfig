@@ -519,20 +519,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D0C807D7178B4A63009874F3 /* Generate Apple Docs */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Generate Apple Docs";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "appledoc --project-name \"MSActiveConfig\" --project-company \"MindSnacks\" --company-id \"com.mindsnacks\" --output \"~/help/\" --publish-docset --logformat xcode --keep-undocumented-objects --keep-undocumented-members --keep-intermediate-files --no-repeat-first-par --no-warn-invalid-crossref --ignore \"*.m\" -i \"*+Private.h\" --index-desc --use-code-order \"./README.md\" MSActiveConfig/ &>/dev/null\n\nexit 0";
-		};
 		D0CE65771742FCAF00509571 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
