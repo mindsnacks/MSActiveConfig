@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "MSActiveConfig"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Remote configuration and A/B Testing framework for iOS."
   s.homepage     = "https://github.com/mindsnacks/MSActiveConfig"
 
