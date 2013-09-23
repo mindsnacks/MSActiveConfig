@@ -7,8 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D03194CF178748E00096833B /* MSUserDefaultsActiveConfigStore.h in Headers */ = {isa = PBXBuildFile; fileRef = D03194CD178748E00096833B /* MSUserDefaultsActiveConfigStore.h */; };
+		D03194CF178748E00096833B /* MSUserDefaultsActiveConfigStore.h in Headers */ = {isa = PBXBuildFile; fileRef = D03194CD178748E00096833B /* MSUserDefaultsActiveConfigStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D03194D0178748E00096833B /* MSUserDefaultsActiveConfigStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D03194CE178748E00096833B /* MSUserDefaultsActiveConfigStore.m */; };
+		D047ADB0178891CA0098D6BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CE657C1742FCAF00509571 /* UIKit.framework */; };
+		D047ADB1178891CA0098D6BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CE656B1742FCAF00509571 /* Foundation.framework */; };
+		D047ADB3178891CA0098D6BC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D047ADB2178891CA0098D6BC /* CoreGraphics.framework */; };
+		D047ADB9178891CA0098D6BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D047ADB7178891CA0098D6BC /* InfoPlist.strings */; };
+		D047ADBB178891CA0098D6BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D047ADBA178891CA0098D6BC /* main.m */; };
+		D047ADBF178891CA0098D6BC /* MSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D047ADBE178891CA0098D6BC /* MSAppDelegate.m */; };
+		D047ADC1178891CA0098D6BC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D047ADC0178891CA0098D6BC /* Default.png */; };
+		D047ADC3178891CA0098D6BC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D047ADC2178891CA0098D6BC /* Default@2x.png */; };
+		D047ADC5178891CA0098D6BC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D047ADC4178891CA0098D6BC /* Default-568h@2x.png */; };
+		D047ADC8178891CA0098D6BC /* MSSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D047ADC7178891CA0098D6BC /* MSSettingsViewController.m */; };
+		D047ADCF178891CA0098D6BC /* MSSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D047ADCE178891CA0098D6BC /* MSSampleViewController.m */; };
+		D047ADFC1788935D0098D6BC /* MSActiveConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D047ADFB1788935D0098D6BC /* MSActiveConfigManager.m */; };
+		D047ADFE1788943D0098D6BC /* InitialActiveConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = D047ADFD1788943D0098D6BC /* InitialActiveConfig.json */; };
+		D0524283178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = D0524281178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0524284178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = D0524282178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.m */; };
+		D0A9DD1A178A25E4009BD002 /* MSActiveConfigConfigurationState+MSLazyLoadedState.h in Headers */ = {isa = PBXBuildFile; fileRef = D0A9DD18178A25E4009BD002 /* MSActiveConfigConfigurationState+MSLazyLoadedState.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0A9DD1B178A25E4009BD002 /* MSActiveConfigConfigurationState+MSLazyLoadedState.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A9DD19178A25E4009BD002 /* MSActiveConfigConfigurationState+MSLazyLoadedState.m */; };
+		D0CB6BA41788959F002E8336 /* libMSActiveConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CE65681742FCAF00509571 /* libMSActiveConfig.a */; };
+		D0CB6BA617889661002E8336 /* MSSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CB6BA517889661002E8336 /* MSSettingsViewController.xib */; };
+		D0CB6BA817889670002E8336 /* MSSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CB6BA717889670002E8336 /* MSSampleViewController.xib */; };
 		D0CE656C1742FCAF00509571 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CE656B1742FCAF00509571 /* Foundation.framework */; };
 		D0CE657B1742FCAF00509571 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CE657A1742FCAF00509571 /* SenTestingKit.framework */; };
 		D0CE657D1742FCAF00509571 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CE657C1742FCAF00509571 /* UIKit.framework */; };
@@ -37,6 +57,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D0CB6BA21788959B002E8336 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0CE65601742FCAF00509571 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0CE65671742FCAF00509571;
+			remoteInfo = MSActiveConfig;
+		};
 		D0CE657F1742FCAF00509571 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D0CE65601742FCAF00509571 /* Project object */;
@@ -77,6 +104,36 @@
 /* Begin PBXFileReference section */
 		D03194CD178748E00096833B /* MSUserDefaultsActiveConfigStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSUserDefaultsActiveConfigStore.h; path = Classes/MSUserDefaultsActiveConfigStore.h; sourceTree = "<group>"; };
 		D03194CE178748E00096833B /* MSUserDefaultsActiveConfigStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSUserDefaultsActiveConfigStore.m; path = Classes/MSUserDefaultsActiveConfigStore.m; sourceTree = "<group>"; };
+		D047ADAF178891CA0098D6BC /* MSActiveConfig-SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MSActiveConfig-SampleApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D047ADB2178891CA0098D6BC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D047ADB6178891CA0098D6BC /* MSActiveConfig-SampleApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MSActiveConfig-SampleApp-Info.plist"; sourceTree = "<group>"; };
+		D047ADB8178891CA0098D6BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D047ADBA178891CA0098D6BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D047ADBC178891CA0098D6BC /* MSActiveConfig-SampleApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MSActiveConfig-SampleApp-Prefix.pch"; sourceTree = "<group>"; };
+		D047ADBD178891CA0098D6BC /* MSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSAppDelegate.h; sourceTree = "<group>"; };
+		D047ADBE178891CA0098D6BC /* MSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSAppDelegate.m; sourceTree = "<group>"; };
+		D047ADC0178891CA0098D6BC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D047ADC2178891CA0098D6BC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D047ADC4178891CA0098D6BC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D047ADC6178891CA0098D6BC /* MSSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSSettingsViewController.h; sourceTree = "<group>"; };
+		D047ADC7178891CA0098D6BC /* MSSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSSettingsViewController.m; sourceTree = "<group>"; };
+		D047ADCD178891CA0098D6BC /* MSSampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSSampleViewController.h; sourceTree = "<group>"; };
+		D047ADCE178891CA0098D6BC /* MSSampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSSampleViewController.m; sourceTree = "<group>"; };
+		D047ADED178891CB0098D6BC /* MSActiveConfig-SampleAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MSActiveConfig-SampleAppTests-Info.plist"; sourceTree = "<group>"; };
+		D047ADEF178891CB0098D6BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D047ADF1178891CB0098D6BC /* MSActiveConfig_SampleAppTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSActiveConfig_SampleAppTests.h; sourceTree = "<group>"; };
+		D047ADF2178891CB0098D6BC /* MSActiveConfig_SampleAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSActiveConfig_SampleAppTests.m; sourceTree = "<group>"; };
+		D047ADFA1788935D0098D6BC /* MSActiveConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSActiveConfigManager.h; sourceTree = "<group>"; };
+		D047ADFB1788935D0098D6BC /* MSActiveConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSActiveConfigManager.m; sourceTree = "<group>"; };
+		D047ADFD1788943D0098D6BC /* InitialActiveConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = InitialActiveConfig.json; sourceTree = "<group>"; };
+		D0524281178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSJSONURLRequestActiveConfigDownloader.h; path = Classes/MSJSONURLRequestActiveConfigDownloader.h; sourceTree = "<group>"; };
+		D0524282178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSJSONURLRequestActiveConfigDownloader.m; path = Classes/MSJSONURLRequestActiveConfigDownloader.m; sourceTree = "<group>"; };
+		D0A9DD18178A25E4009BD002 /* MSActiveConfigConfigurationState+MSLazyLoadedState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MSActiveConfigConfigurationState+MSLazyLoadedState.h"; path = "Classes/MSActiveConfigConfigurationState+MSLazyLoadedState.h"; sourceTree = "<group>"; };
+		D0A9DD19178A25E4009BD002 /* MSActiveConfigConfigurationState+MSLazyLoadedState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MSActiveConfigConfigurationState+MSLazyLoadedState.m"; path = "Classes/MSActiveConfigConfigurationState+MSLazyLoadedState.m"; sourceTree = "<group>"; };
+		D0C807DA178B77B3009874F3 /* MSActiveConfigConfigurationState+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MSActiveConfigConfigurationState+Private.h"; path = "Classes/MSActiveConfigConfigurationState+Private.h"; sourceTree = "<group>"; };
+		D0CB6BA517889661002E8336 /* MSSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MSSettingsViewController.xib; sourceTree = "<group>"; };
+		D0CB6BA717889670002E8336 /* MSSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MSSampleViewController.xib; sourceTree = "<group>"; };
+		D0CB6BA917889BBF002E8336 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		D0CE65681742FCAF00509571 /* libMSActiveConfig.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMSActiveConfig.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0CE656B1742FCAF00509571 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0CE656F1742FCAF00509571 /* MSActiveConfig-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MSActiveConfig-Prefix.pch"; sourceTree = "<group>"; };
@@ -108,6 +165,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D047ADAC178891CA0098D6BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0CB6BA41788959F002E8336 /* libMSActiveConfig.a in Frameworks */,
+				D047ADB0178891CA0098D6BC /* UIKit.framework in Frameworks */,
+				D047ADB1178891CA0098D6BC /* Foundation.framework in Frameworks */,
+				D047ADB3178891CA0098D6BC /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0CE65651742FCAF00509571 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -131,11 +199,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D047ADB4178891CA0098D6BC /* MSActiveConfig-SampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				D047ADBD178891CA0098D6BC /* MSAppDelegate.h */,
+				D047ADBE178891CA0098D6BC /* MSAppDelegate.m */,
+				D047ADFA1788935D0098D6BC /* MSActiveConfigManager.h */,
+				D047ADFB1788935D0098D6BC /* MSActiveConfigManager.m */,
+				D0CB6BA917889BBF002E8336 /* Constants.h */,
+				D047ADC6178891CA0098D6BC /* MSSettingsViewController.h */,
+				D047ADC7178891CA0098D6BC /* MSSettingsViewController.m */,
+				D0CB6BA517889661002E8336 /* MSSettingsViewController.xib */,
+				D047ADCD178891CA0098D6BC /* MSSampleViewController.h */,
+				D047ADCE178891CA0098D6BC /* MSSampleViewController.m */,
+				D0CB6BA717889670002E8336 /* MSSampleViewController.xib */,
+				D047ADFD1788943D0098D6BC /* InitialActiveConfig.json */,
+				D047ADB5178891CA0098D6BC /* Supporting Files */,
+			);
+			path = "MSActiveConfig-SampleApp";
+			sourceTree = "<group>";
+		};
+		D047ADB5178891CA0098D6BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D047ADB6178891CA0098D6BC /* MSActiveConfig-SampleApp-Info.plist */,
+				D047ADB7178891CA0098D6BC /* InfoPlist.strings */,
+				D047ADBA178891CA0098D6BC /* main.m */,
+				D047ADBC178891CA0098D6BC /* MSActiveConfig-SampleApp-Prefix.pch */,
+				D047ADC0178891CA0098D6BC /* Default.png */,
+				D047ADC2178891CA0098D6BC /* Default@2x.png */,
+				D047ADC4178891CA0098D6BC /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D047ADEB178891CB0098D6BC /* MSActiveConfig-SampleAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				D047ADF1178891CB0098D6BC /* MSActiveConfig_SampleAppTests.h */,
+				D047ADF2178891CB0098D6BC /* MSActiveConfig_SampleAppTests.m */,
+				D047ADEC178891CB0098D6BC /* Supporting Files */,
+			);
+			path = "MSActiveConfig-SampleAppTests";
+			sourceTree = "<group>";
+		};
+		D047ADEC178891CB0098D6BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D047ADED178891CB0098D6BC /* MSActiveConfig-SampleAppTests-Info.plist */,
+				D047ADEE178891CB0098D6BC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D0CE655F1742FCAF00509571 = {
 			isa = PBXGroup;
 			children = (
 				D0CE656D1742FCAF00509571 /* MSActiveConfig */,
 				D0CE65821742FCAF00509571 /* MSActiveConfigTests */,
+				D047ADB4178891CA0098D6BC /* MSActiveConfig-SampleApp */,
+				D047ADEB178891CB0098D6BC /* MSActiveConfig-SampleAppTests */,
 				D0CE656A1742FCAF00509571 /* Frameworks */,
 				D0CE65691742FCAF00509571 /* Products */,
 			);
@@ -146,6 +269,7 @@
 			children = (
 				D0CE65681742FCAF00509571 /* libMSActiveConfig.a */,
 				D0CE65791742FCAF00509571 /* MSActiveConfigTests.octest */,
+				D047ADAF178891CA0098D6BC /* MSActiveConfig-SampleApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,6 +280,7 @@
 				D0CE656B1742FCAF00509571 /* Foundation.framework */,
 				D0CE657A1742FCAF00509571 /* SenTestingKit.framework */,
 				D0CE657C1742FCAF00509571 /* UIKit.framework */,
+				D047ADB2178891CA0098D6BC /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -167,6 +292,7 @@
 				D0CE65951742FE2400509571 /* MSActiveConfig+Private.h */,
 				D0CE65941742FE2400509571 /* MSActiveConfig.m */,
 				D0CE65961742FE2400509571 /* MSActiveConfigConfigurationState.h */,
+				D0C807DA178B77B3009874F3 /* MSActiveConfigConfigurationState+Private.h */,
 				D0CE65971742FE2400509571 /* MSActiveConfigConfigurationState.m */,
 				D0CE659C1742FE2400509571 /* MSActiveConfigMutableConfigurationState.h */,
 				D0CE659D1742FE2400509571 /* MSActiveConfigMutableConfigurationState.m */,
@@ -178,6 +304,10 @@
 				D0CE659F1742FE2400509571 /* MSActiveConfigSection.m */,
 				D03194CD178748E00096833B /* MSUserDefaultsActiveConfigStore.h */,
 				D03194CE178748E00096833B /* MSUserDefaultsActiveConfigStore.m */,
+				D0524281178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.h */,
+				D0524282178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.m */,
+				D0A9DD18178A25E4009BD002 /* MSActiveConfigConfigurationState+MSLazyLoadedState.h */,
+				D0A9DD19178A25E4009BD002 /* MSActiveConfigConfigurationState+MSLazyLoadedState.m */,
 				D0CE656E1742FCAF00509571 /* Supporting Files */,
 			);
 			path = MSActiveConfig;
@@ -242,12 +372,32 @@
 				D0CE65AD1742FE5100509571 /* MSActiveConfigConfigurationState.h in Headers */,
 				D0CE65B11742FE5100509571 /* MSActiveConfigMutableConfigurationState.h in Headers */,
 				D03194CF178748E00096833B /* MSUserDefaultsActiveConfigStore.h in Headers */,
+				D0524283178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.h in Headers */,
+				D0A9DD1A178A25E4009BD002 /* MSActiveConfigConfigurationState+MSLazyLoadedState.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		D047ADAE178891CA0098D6BC /* MSActiveConfig-SampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D047ADF4178891CB0098D6BC /* Build configuration list for PBXNativeTarget "MSActiveConfig-SampleApp" */;
+			buildPhases = (
+				D047ADAB178891CA0098D6BC /* Sources */,
+				D047ADAC178891CA0098D6BC /* Frameworks */,
+				D047ADAD178891CA0098D6BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0CB6BA31788959B002E8336 /* PBXTargetDependency */,
+			);
+			name = "MSActiveConfig-SampleApp";
+			productName = "MSActiveConfig-SampleApp";
+			productReference = D047ADAF178891CA0098D6BC /* MSActiveConfig-SampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 		D0CE65671742FCAF00509571 /* MSActiveConfig */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0CE658D1742FCAF00509571 /* Build configuration list for PBXNativeTarget "MSActiveConfig" */;
@@ -313,6 +463,7 @@
 			projectRoot = "";
 			targets = (
 				D0CE65671742FCAF00509571 /* MSActiveConfig */,
+				D047ADAE178891CA0098D6BC /* MSActiveConfig-SampleApp */,
 				D0CE65781742FCAF00509571 /* MSActiveConfigTests */,
 			);
 		};
@@ -343,6 +494,20 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D047ADAD178891CA0098D6BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D047ADB9178891CA0098D6BC /* InfoPlist.strings in Resources */,
+				D047ADC1178891CA0098D6BC /* Default.png in Resources */,
+				D047ADC3178891CA0098D6BC /* Default@2x.png in Resources */,
+				D047ADC5178891CA0098D6BC /* Default-568h@2x.png in Resources */,
+				D047ADFE1788943D0098D6BC /* InitialActiveConfig.json in Resources */,
+				D0CB6BA617889661002E8336 /* MSSettingsViewController.xib in Resources */,
+				D0CB6BA817889670002E8336 /* MSSampleViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0CE65761742FCAF00509571 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -370,6 +535,18 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D047ADAB178891CA0098D6BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D047ADBB178891CA0098D6BC /* main.m in Sources */,
+				D047ADBF178891CA0098D6BC /* MSAppDelegate.m in Sources */,
+				D047ADC8178891CA0098D6BC /* MSSettingsViewController.m in Sources */,
+				D047ADCF178891CA0098D6BC /* MSSampleViewController.m in Sources */,
+				D047ADFC1788935D0098D6BC /* MSActiveConfigManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0CE65641742FCAF00509571 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,6 +556,8 @@
 				D0CE65A71742FE2400509571 /* MSActiveConfigMutableConfigurationState.m in Sources */,
 				D0CE65A81742FE2400509571 /* MSActiveConfigSection.m in Sources */,
 				D03194D0178748E00096833B /* MSUserDefaultsActiveConfigStore.m in Sources */,
+				D0524284178781BD00C87D2E /* MSJSONURLRequestActiveConfigDownloader.m in Sources */,
+				D0A9DD1B178A25E4009BD002 /* MSActiveConfigConfigurationState+MSLazyLoadedState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +576,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D0CB6BA31788959B002E8336 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0CE65671742FCAF00509571 /* MSActiveConfig */;
+			targetProxy = D0CB6BA21788959B002E8336 /* PBXContainerItemProxy */;
+		};
 		D0CE65801742FCAF00509571 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D0CE65671742FCAF00509571 /* MSActiveConfig */;
@@ -410,6 +594,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		D047ADB7178891CA0098D6BC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D047ADB8178891CA0098D6BC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D047ADEE178891CB0098D6BC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D047ADEF178891CB0098D6BC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		D0CE65851742FCAF00509571 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -421,6 +621,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D047ADF5178891CB0098D6BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MSActiveConfig-SampleApp/MSActiveConfig-SampleApp-Prefix.pch";
+				INFOPLIST_FILE = "MSActiveConfig-SampleApp/MSActiveConfig-SampleApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D047ADF6178891CB0098D6BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MSActiveConfig-SampleApp/MSActiveConfig-SampleApp-Prefix.pch";
+				INFOPLIST_FILE = "MSActiveConfig-SampleApp/MSActiveConfig-SampleApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		D0CE658B1742FCAF00509571 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -493,7 +733,6 @@
 				DSTROOT = /tmp/MSActiveConfig.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MSActiveConfig/MSActiveConfig-Prefix.pch";
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_SIGN_COMPARE = YES;
 				GCC_WARN_UNKNOWN_PRAGMAS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
@@ -512,7 +751,6 @@
 				DSTROOT = /tmp/MSActiveConfig.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MSActiveConfig/MSActiveConfig-Prefix.pch";
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_SIGN_COMPARE = YES;
 				GCC_WARN_UNKNOWN_PRAGMAS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
@@ -570,6 +808,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D047ADF4178891CB0098D6BC /* Build configuration list for PBXNativeTarget "MSActiveConfig-SampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D047ADF5178891CB0098D6BC /* Debug */,
+				D047ADF6178891CB0098D6BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D0CE65631742FCAF00509571 /* Build configuration list for PBXProject "MSActiveConfig" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

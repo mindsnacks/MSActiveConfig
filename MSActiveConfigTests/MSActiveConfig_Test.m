@@ -1,6 +1,6 @@
 //
 //  MSActiveConfig_Test.m
-//  MSAppKit
+//  MSActiveConfig
 //
 //  Created by Javier Soto on 6/26/12.
 //  Copyright (c) 2012 MindSnacks. All rights reserved.
