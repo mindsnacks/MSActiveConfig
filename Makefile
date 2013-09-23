@@ -1,2 +1,2 @@
 test:
-	xctool -project MSActiveConfig.xcodeproj -scheme 'MSActiveConfigTests' -reporter pretty -sdk iphonesimulator test
+	xctool -workspace MSActiveConfig.xcworkspace -scheme 'MSActiveConfigTests' -reporter pretty -sdk iphonesimulator test
