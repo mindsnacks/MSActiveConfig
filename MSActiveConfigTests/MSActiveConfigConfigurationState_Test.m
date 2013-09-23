@@ -1,6 +1,6 @@
 //
 //  MSActiveConfigConfigurationState_Test.m
-//  MSAppKit
+//  MSActiveConfig
 //
 //  Created by Javier Soto on 8/13/12.
 //
@@ -9,6 +9,7 @@
 #import "MSActiveConfig_BaseTest.h"
 
 #import "MSActiveConfigConfigurationState.h"
+#import "MSActiveConfigConfigurationState+Private.h"
 #import "MSActiveConfigMutableConfigurationState.h"
 
 @interface MSActiveConfigConfigurationState_Test : MSActiveConfig_BaseTest

@@ -37,6 +37,11 @@ static NSString *const MSActiveConfigSectionValueKey = @"value";
     return self;
 }
 
+- (id)init
+{
+    return [self initWithDictionary:nil];
+}
+
 + (MSActiveConfigSection *)configSectionWithDictionary:(NSDictionary *)dictionary
 {
     return [[self alloc] initWithDictionary:dictionary];
@@ -114,6 +119,11 @@ static NSString *const MSActiveConfigSectionValueKey = @"value";
     }
 
     return nil;
+}
+
+- (id)objectForKeyedSubscript:(NSString *)key
+{
+    return [self valueObjectForKey:key];
 }
 
 - (NSString *)stringForKey:(NSString *)key

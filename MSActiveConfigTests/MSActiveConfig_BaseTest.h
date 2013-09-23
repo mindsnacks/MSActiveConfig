@@ -1,6 +1,6 @@
 //
 //  MSActiveConfig_BaseTest.h
-//  MSAppKit
+//  MSActiveConfig
 //
 //  Created by Javier Soto on 8/13/12.
 //

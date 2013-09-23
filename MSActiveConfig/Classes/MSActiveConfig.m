@@ -13,13 +13,14 @@
 #import "MSActiveConfigSection+Private.h"
 
 #import "MSActiveConfigConfigurationState.h"
+#import "MSActiveConfigConfigurationState+Private.h"
 #import "MSActiveConfigMutableConfigurationState.h"
 #import "MSActiveConfigStore.h"
 
 #import "MSActiveConfigDownloader.h"
 
 #if !__has_feature(objc_arc)
-#error MSActiveConfig requires being compiled with ARC on.
+#error MSActiveConfig requires being compiled with ARC enabled.
 #endif
 
 static NSString *const MSActiveConfigFirstDownloadFinishedUserDefaultsKey = @"com_mindsnacks_activeconfig_firstdownloadfinished";
@@ -30,7 +31,7 @@ NSString *const MSActiveConfigFirstDownloadFinishedNotification = @"MSActiveConf
 NSString *const MSActiveConfigDownloadUpdateFinishedNotification = @"MSActiveConfigDownloadUpdateFinishedNotification";
 NSString *const MSActiveConfigDownloadUpdateFinishedNotificationUserIDKey = @"user_id";
 NSString *const MSActiveConfigDownloadUpdateFinishedNotificationMetaKey = @"meta";
-NSString *const MSActiveConfigDownloadUpdateFinishedNotificationConfigurationSetKey = @"config_was_set";
+NSString *const MSActiveConfigDownloadUpdateFinishedNotificationConfigurationIsCurrentKey = @"config_was_set";
 
 @interface MSActiveConfig()
 
@@ -247,7 +248,7 @@ NSString *const MSActiveConfigDownloadUpdateFinishedNotificationConfigurationSet
 
     MSActiveConfigConfigurationState *newState = [[MSActiveConfigConfigurationState alloc] initWithDictionary:configurationDictionary];
 
-    if (newState)
+    if (newState && newState.configurationDictionary.count > 0)
     {
         if (sameUserID)
         {
@@ -284,7 +285,7 @@ NSString *const MSActiveConfigDownloadUpdateFinishedNotificationConfigurationSet
          (@{
           MSActiveConfigDownloadUpdateFinishedNotificationUserIDKey : userID ?: [NSNull null],
           MSActiveConfigDownloadUpdateFinishedNotificationMetaKey : newState.meta ?: self.currentConfigurationMetaDictionary ?: @{},
-          MSActiveConfigDownloadUpdateFinishedNotificationConfigurationSetKey: @(newState != nil && sameUserID)
+          MSActiveConfigDownloadUpdateFinishedNotificationConfigurationIsCurrentKey: @(newState != nil && sameUserID)
           })];
     });
 }
@@ -382,20 +383,9 @@ NSString *const MSActiveConfigDownloadUpdateFinishedNotificationConfigurationSet
 
 - (MSActiveConfigSection *)configSectionWithName:(NSString *)sectionName
 {
-    NSDictionary *configurationDictionary = nil;
-
     @synchronized(self)
     {
-        configurationDictionary = [self.configDictionary valueForKey:sectionName];
-    }
-
-    if (configurationDictionary)
-    {
-        return [[MSActiveConfigSection alloc] initWithDictionary:configurationDictionary];
-    }
-    else
-    {
-        return nil;
+        return [self.configurationState configSectionWithName:sectionName];
     }
 }
 
