@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29547EEF3C4344158E6A11D2 /* libPods-MSActiveConfigTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E396BBB740C84885BB553BA3 /* libPods-MSActiveConfigTests.a */; };
 		D03194CF178748E00096833B /* MSUserDefaultsActiveConfigStore.h in Headers */ = {isa = PBXBuildFile; fileRef = D03194CD178748E00096833B /* MSUserDefaultsActiveConfigStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D03194D0178748E00096833B /* MSUserDefaultsActiveConfigStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D03194CE178748E00096833B /* MSUserDefaultsActiveConfigStore.m */; };
 		D047ADB0178891CA0098D6BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CE657C1742FCAF00509571 /* UIKit.framework */; };
@@ -53,7 +54,6 @@
 		D0D1FD681787532800DE9371 /* MSActiveConfigConfigurationState_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1FD631787532800DE9371 /* MSActiveConfigConfigurationState_Test.m */; };
 		D0D1FD691787532800DE9371 /* MSUserDefaultsActiveConfigStore_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1FD641787532800DE9371 /* MSUserDefaultsActiveConfigStore_Test.m */; };
 		D0D1FD6A1787532800DE9371 /* MSConfigSection_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1FD651787532800DE9371 /* MSConfigSection_Test.m */; };
-		D0D1FECE1787590800DE9371 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D1FEC51787580F00DE9371 /* libOCMock.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,37 +71,10 @@
 			remoteGlobalIDString = D0CE65671742FCAF00509571;
 			remoteInfo = MSActiveConfig;
 		};
-		D0D1FEC01787580F00DE9371 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D0D1FEBA1787580F00DE9371 /* OCMock.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 030EF0A814632FD000B04273;
-			remoteInfo = OCMock;
-		};
-		D0D1FEC21787580F00DE9371 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D0D1FEBA1787580F00DE9371 /* OCMock.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 030EF0C014632FD000B04273;
-			remoteInfo = OCMockTests;
-		};
-		D0D1FEC41787580F00DE9371 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D0D1FEBA1787580F00DE9371 /* OCMock.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 030EF0DC14632FF700B04273;
-			remoteInfo = OCMockLib;
-		};
-		D0D1FECC178758F300DE9371 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D0D1FEBA1787580F00DE9371 /* OCMock.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 030EF0DB14632FF700B04273;
-			remoteInfo = OCMockLib;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		75ED5731EC9B4F3FBCA04835 /* Pods-MSActiveConfigTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSActiveConfigTests.xcconfig"; path = "Pods/Pods-MSActiveConfigTests.xcconfig"; sourceTree = "<group>"; };
 		D03194CD178748E00096833B /* MSUserDefaultsActiveConfigStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSUserDefaultsActiveConfigStore.h; path = Classes/MSUserDefaultsActiveConfigStore.h; sourceTree = "<group>"; };
 		D03194CE178748E00096833B /* MSUserDefaultsActiveConfigStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSUserDefaultsActiveConfigStore.m; path = Classes/MSUserDefaultsActiveConfigStore.m; sourceTree = "<group>"; };
 		D047ADAF178891CA0098D6BC /* MSActiveConfig-SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MSActiveConfig-SampleApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,7 +134,7 @@
 		D0D1FD631787532800DE9371 /* MSActiveConfigConfigurationState_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSActiveConfigConfigurationState_Test.m; sourceTree = "<group>"; };
 		D0D1FD641787532800DE9371 /* MSUserDefaultsActiveConfigStore_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSUserDefaultsActiveConfigStore_Test.m; sourceTree = "<group>"; };
 		D0D1FD651787532800DE9371 /* MSConfigSection_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSConfigSection_Test.m; sourceTree = "<group>"; };
-		D0D1FEBA1787580F00DE9371 /* OCMock.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OCMock.xcodeproj; path = Dependencies/OCMock/Source/OCMock.xcodeproj; sourceTree = "<group>"; };
+		E396BBB740C84885BB553BA3 /* libPods-MSActiveConfigTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MSActiveConfigTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,11 +161,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0D1FECE1787590800DE9371 /* libOCMock.a in Frameworks */,
 				D0CE657B1742FCAF00509571 /* SenTestingKit.framework in Frameworks */,
 				D0CE657D1742FCAF00509571 /* UIKit.framework in Frameworks */,
 				D0CE657E1742FCAF00509571 /* Foundation.framework in Frameworks */,
 				D0CE65811742FCAF00509571 /* libMSActiveConfig.a in Frameworks */,
+				29547EEF3C4344158E6A11D2 /* libPods-MSActiveConfigTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +234,7 @@
 				D047ADEB178891CB0098D6BC /* MSActiveConfig-SampleAppTests */,
 				D0CE656A1742FCAF00509571 /* Frameworks */,
 				D0CE65691742FCAF00509571 /* Products */,
+				75ED5731EC9B4F3FBCA04835 /* Pods-MSActiveConfigTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -281,6 +255,7 @@
 				D0CE657A1742FCAF00509571 /* SenTestingKit.framework */,
 				D0CE657C1742FCAF00509571 /* UIKit.framework */,
 				D047ADB2178891CA0098D6BC /* CoreGraphics.framework */,
+				E396BBB740C84885BB553BA3 /* libPods-MSActiveConfigTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -330,7 +305,6 @@
 				D0D1FD631787532800DE9371 /* MSActiveConfigConfigurationState_Test.m */,
 				D0D1FD641787532800DE9371 /* MSUserDefaultsActiveConfigStore_Test.m */,
 				D0D1FD651787532800DE9371 /* MSConfigSection_Test.m */,
-				D0D1FEBA1787580F00DE9371 /* OCMock.xcodeproj */,
 				D0CE65831742FCAF00509571 /* Supporting Files */,
 			);
 			path = MSActiveConfigTests;
@@ -343,16 +317,6 @@
 				D0CE65851742FCAF00509571 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D0D1FEBB1787580F00DE9371 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D0D1FEC11787580F00DE9371 /* OCMock.framework */,
-				D0D1FEC31787580F00DE9371 /* OCMockTests.octest */,
-				D0D1FEC51787580F00DE9371 /* libOCMock.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,16 +383,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0CE65901742FCAF00509571 /* Build configuration list for PBXNativeTarget "MSActiveConfigTests" */;
 			buildPhases = (
+				2A4AB0DB1A374902A6CD9AC9 /* Check Pods Manifest.lock */,
 				D0CE65741742FCAF00509571 /* Sources */,
 				D0CE65751742FCAF00509571 /* Frameworks */,
 				D0CE65761742FCAF00509571 /* Resources */,
 				D0CE65771742FCAF00509571 /* ShellScript */,
+				6EA1C36493FB4522B737C977 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				D0CE65801742FCAF00509571 /* PBXTargetDependency */,
-				D0D1FECD178758F300DE9371 /* PBXTargetDependency */,
 			);
 			name = MSActiveConfigTests;
 			productName = MSActiveConfigTests;
@@ -454,12 +419,6 @@
 			mainGroup = D0CE655F1742FCAF00509571;
 			productRefGroup = D0CE65691742FCAF00509571 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = D0D1FEBB1787580F00DE9371 /* Products */;
-					ProjectRef = D0D1FEBA1787580F00DE9371 /* OCMock.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				D0CE65671742FCAF00509571 /* MSActiveConfig */,
@@ -468,30 +427,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		D0D1FEC11787580F00DE9371 /* OCMock.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OCMock.framework;
-			remoteRef = D0D1FEC01787580F00DE9371 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D0D1FEC31787580F00DE9371 /* OCMockTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = OCMockTests.octest;
-			remoteRef = D0D1FEC21787580F00DE9371 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D0D1FEC51787580F00DE9371 /* libOCMock.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libOCMock.a;
-			remoteRef = D0D1FEC41787580F00DE9371 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D047ADAD178891CA0098D6BC /* Resources */ = {
@@ -519,6 +454,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2A4AB0DB1A374902A6CD9AC9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6EA1C36493FB4522B737C977 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-MSActiveConfigTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D0CE65771742FCAF00509571 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -585,11 +550,6 @@
 			isa = PBXTargetDependency;
 			target = D0CE65671742FCAF00509571 /* MSActiveConfig */;
 			targetProxy = D0CE657F1742FCAF00509571 /* PBXContainerItemProxy */;
-		};
-		D0D1FECD178758F300DE9371 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = OCMockLib;
-			targetProxy = D0D1FECC178758F300DE9371 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -763,6 +723,7 @@
 		};
 		D0CE65911742FCAF00509571 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75ED5731EC9B4F3FBCA04835 /* Pods-MSActiveConfigTests.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
@@ -770,14 +731,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MSActiveConfig/MSActiveConfig-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/MSActiveConfigTests/Dependencies/**";
 				INFOPLIST_FILE = "MSActiveConfigTests/MSActiveConfigTests-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/MSActiveConfigTests/Dependencies/OCMock/Examples/iOS5Example/usr/lib\"",
-					"\"$(SRCROOT)/MSActiveConfigTests/Dependencies/OCMock/Examples/iPhoneExample/Libraries\"",
-				);
-				OTHER_LDFLAGS = "-ObjC";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -785,6 +740,7 @@
 		};
 		D0CE65921742FCAF00509571 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75ED5731EC9B4F3FBCA04835 /* Pods-MSActiveConfigTests.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
@@ -792,14 +748,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MSActiveConfig/MSActiveConfig-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/MSActiveConfigTests/Dependencies/**";
 				INFOPLIST_FILE = "MSActiveConfigTests/MSActiveConfigTests-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/MSActiveConfigTests/Dependencies/OCMock/Examples/iOS5Example/usr/lib\"",
-					"\"$(SRCROOT)/MSActiveConfigTests/Dependencies/OCMock/Examples/iPhoneExample/Libraries\"",
-				);
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
